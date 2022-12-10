@@ -6,6 +6,7 @@
 
 /* --------- VARIABLES --------- */
 $oscuro: #0C0C0C;
+$rojoMolon: rgb(138, 16, 16);
 
 /* --------- ICONS --------- */
 .imSoundcloud{
@@ -101,42 +102,15 @@ $oscuro: #0C0C0C;
         color: #fff;
         font-size: 1.2em;
         cursor: pointer;
+        
+        &:active{
+          transform: scale(1.15);
+          filter: drop-shadow(0 0 17px rgb(255, 255, 255));
+          transition: all 0.075s;
+        }
       }
     }
   }
-}
-a{
-  font-size: 19px;
-  letter-spacing: 1px;
-  transform-style: preserve-3d;
-  transform: translateZ(-25px);
-  transition: transform .25s;
-  font-family: 'Montserrat', sans-serif;
-}
-button a:before,
-button a:after{
-  position: absolute;
-  content: "BUTTON";
-  height: 55px;
-  width: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid black;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-button a:before{
-  color: #fff;
-  background: #000;
-  transform: rotateY(0deg) translateZ(25px);
-}
-button a:after{
-  color: #000;
-  transform: rotateX(90deg) translateZ(25px);
-}
-button a:hover{
-  transform: translateZ(-25px) rotateX(-90deg);
 }
 .esconder-burguer-content{
   left: -100%;
@@ -157,15 +131,15 @@ button a:hover{
   transition: 0.5s;
 }
 
-/* --------- HOME --------- */
-.home-body{
+/* --------- INICIO --------- */
+.inicio-body{
   width: 100%;
   height: 100vh;
 
   &__banner-cont{
 
     &__img{
-       width: 100%;
+      width: 100%;
       // height: 20em;
       object-fit: contain;
     }
@@ -179,13 +153,13 @@ button a:hover{
 
     &__img{
       width: 100%;
-      height: 20em;
+      height: 25em;
       object-fit: cover;
     }
   }
 
   &__ultimo-disco-container{
-    padding: 80px 0 80px 0;
+    padding: 50px 0 50px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -200,6 +174,11 @@ button a:hover{
     }
 
     &__btn-container{
+      width: 150px;
+      height: 70px;
+      display: flex;
+      place-content: center;
+      place-items: center;
       &__a{
         &__btn{
           position: relative;
@@ -209,6 +188,7 @@ button a:hover{
           color: #fff;
           padding: 15px;
           width: 140px;
+          height: 60px;
           font-size: 1em;
           font-family: 'Oswald', sans-serif;
           cursor: pointer;
@@ -256,6 +236,131 @@ button a:hover{
     }
   }
 }
+/* --------- BIOGRAFIA --------- */
+.biografia-body{
+
+  &__banner-cont{
+
+    &__img{
+      width: 100%;
+      height: 20em;
+      object-fit: cover;
+    }
+  }
+}
+
+/* --------- FOTOS --------- */
+.fotos-body{
+
+  &__banner-cont{
+
+    &__img{
+      width: 100%;
+      height: 20em;
+      object-fit: cover;
+    }
+  }
+}
+
+/* --------- CONTACTO --------- */
+.contacto-body{
+
+  &__banner-cont{
+
+    &__img{
+      width: 100%;
+      height: 20em;
+      object-fit: cover;
+    }
+  }
+}
+/* --------- FOOTER --------- */
+.footer-body{
+  background: linear-gradient(0deg, rgb(60, 60, 60), rgb(126, 126, 126));
+
+  &__container{
+    padding: 0 20px 20px 20px;
+    // background-color: rgb(90, 90, 90);
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+
+    &__logo-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: -30px;
+      
+      &__logo{
+        width: 150px;
+      }
+    }
+    &__contactar-container{
+      display: flex;
+      flex-direction: column;
+      
+      &__title{
+        &__p{
+          font-size: 1.2em;
+        }
+      }
+
+      &__links{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+
+        &__a{
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+          
+          &:hover{
+            color: rgb(40, 40, 40);
+          }
+          &:active{
+            color: rgb(60, 60, 60);
+          }
+          & span{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &__seguir-container{
+      display: flex;
+      flex-direction: column;
+
+      &__title{
+        &__p{
+          font-size: 1.2em;
+        }
+      }
+      
+      &__icons{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;      
+      
+        & a{
+          color: #000;
+          font-size: 2em;
+          cursor: pointer;
+
+          &:hover{
+            // color: rgb(40, 40, 40);
+            filter: drop-shadow(2px 2px 3px rgba(43, 43, 43, 0.548))
+          }
+          &:active{
+            color: rgb(40, 40, 40);
+          }
+        }
+      }
+    }
+  }
+}
+
 
 //MEDIA QUERIES
 // Small devices (landscape phones, 576px and up)
@@ -271,11 +376,48 @@ button a:hover{
       align-items: center;
   
       &__navlink{
+        position: relative;
         font-size: 1.5em;
-        font-weight: 500;
+        font-weight: 700;
         text-decoration: none;
         color: #000;
         cursor: pointer;
+
+        &::after{
+          content: '';
+          background-color: $oscuro;
+          position: absolute;
+          bottom: -12%;
+          left: 0;
+          width: 0%;
+          height: 3px;
+        }
+        &::before{
+          content: '';
+          background-color: $oscuro;
+          position: absolute;
+          bottom: -12%;
+          right: 0;
+          width: 0%;
+          height: 3px;
+          transition: width 0.4s; // dcha to izq
+        }
+        &:hover:after{
+          width: 100%;
+          transition: width 0.15s; // izq to dcha
+        }
+        &:hover:before{
+          width: 100%;
+          transition: width 0.2s;
+          transition-delay: 0.2s;
+        }
+
+        &__clickEnNavLink{
+          // filter: 
+          // drop-shadow(0px 0px 15px rgb(60, 161, 40));
+          color: rgba(0, 0, 0, 0.4);
+          transition: all 0.5s;
+        }
       }
     }
   
@@ -307,8 +449,8 @@ button a:hover{
       }
     }
   }
-}
 
+}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 
@@ -329,10 +471,48 @@ button a:hover{
       }
     }
   }
+  /* --------- FOOTER --------- */
+  .footer-body{
+    &__container{
+      padding: 60px 40px 80px 40px;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      &__contactar-container{
+        &__title{
+        }
+
+      }
+      &__seguir-container{
+        flex-direction: column;
+
+        &__title{
+        }
+        
+        &__icons{
+          & a{
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  /* --------- NAVBAR --------- */
+  .nav-container{
+    &__logo{
+      width: 250px;
+      height: 125px;
+
+      &__img{
+        width: 200px;
+      }
+      
+    }
+  }
   /* --------- MUSICA --------- */
   .musica-body{
     &__ultimo-disco-container{

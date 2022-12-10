@@ -4,9 +4,9 @@ import banner from '../img/home-banner.jpg';
 function Biografia() {
   return (
   <>
-  <div className='musica-body'>
-    <a className='musica-body__banner-cont'>
-      <img className='musica-body__banner-cont__img' src={banner}/>
+  <div className='biografia-body'>
+    <a className='biografia-body__banner-cont'>
+      <img className='biografia-body__banner-cont__img' src={banner}/>
     </a>
   </div>
   <div className=''>

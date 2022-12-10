@@ -16,7 +16,7 @@ function Musica() {
       </div>
       <div className='musica-body__ultimo-disco-container__btn-container'>
         <a className='musica-body__ultimo-disco-container__btn-container__a' href='#' target='_blank'>
-          <button className='musica-body__ultimo-disco-container__btn-container__a__btn animate__animated animate__tada'>COMPRALO YA</button>
+          <button className='musica-body__ultimo-disco-container__btn-container__a__btn animate__animated animate__tada animate__delay-2s'>COMPRALO YA</button>
         </a>
       </div>
     </div>

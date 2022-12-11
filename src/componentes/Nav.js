@@ -32,8 +32,8 @@ function Nav() {
   useEffect(() => { 
     const rutaURL = window.location.pathname;   
     for (let i = 0; i < refNav.current.childNodes.length; i++) {
-      if(refNav.current.childNodes[i].href.includes(rutaURL) === true) refNav.current.childNodes[i].className='nav-container__barra__navlink nav-container__barra__navlink__clickEnNavLink';
       if(rutaURL == '/') refNav.current.childNodes[i].className='nav-container__barra__navlink'
+      else if(refNav.current.childNodes[i].href.includes(rutaURL) === true) refNav.current.childNodes[i].className='nav-container__barra__navlink nav-container__barra__navlink__clickEnNavLink';
       else refNav.current.childNodes[i].className='nav-container__barra__navlink';
     };
   },[variableRandomUseEffect]);

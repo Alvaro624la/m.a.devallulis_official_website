@@ -38,6 +38,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     height: 100px;
 
     &__img{
+      display: block;
       filter: drop-shadow(3px 4px 4px black);
       z-index: 999;
       position: absolute;
@@ -90,6 +91,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     &__logo-cont{
     
       &__img{
+        display: block;
         width: 200px;
         cursor: pointer;
       }
@@ -143,6 +145,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
   &__banner-cont{
 
     &__img{
+      display: block;
       width: 100%;
       // height: 20em;
       object-fit: contain;
@@ -156,6 +159,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
   &__banner-cont{
 
     &__img{
+      display: block;
       width: 100%;
       height: 25em;
       object-fit: cover;
@@ -172,6 +176,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 
     &__img-container{
       &__img{
+        display: block;
         margin: 20px 10px 20px 10px;
         width: 250px;
       }
@@ -242,14 +247,78 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 }
 /* --------- BIOGRAFIA --------- */
 .biografia-body{
+  position: relative;
 
-  &__banner-cont{
+  &__banner-img{
+    display: block;
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+  //imagen en medio de la pantalla, encima del texto
+  // &__perfil-img-container__perfil-img{
+    // position: absolute;
+    // min-width: 200px;
+    // width: 40%;
+    // max-width: 340px;
+    // top: 15em;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // border-radius: 40px;
+  // }
+  &__perfil-img-container{
+    float: none;
+    position: absolute;
+    min-width: 200px;
+    width: 40%;
+    max-width: 340px;
+    top: 15em;
+    left: 50%;
+    transform: translateX(-50%);
 
-    &__img{
+    //Necesito consejo para decidir si queda mejor con los bordes esos en modo movil o solo cuando se hace mas grande de 500px aprox
+    // &::after, &::before{
+    //   content: '';
+    //   position: absolute;
+    //   bottom: -12px;
+    //   right: -12px;
+    //   width: 10%;
+    //   height: 15%;
+    //   border-width: 8px;
+    //   border-style: groove;
+    //   border-top-color: transparent;
+    //   border-left-color: transparent;
+    //   border-right-color: #569b56;
+    //   border-bottom-color: #569b56;
+    //   border-radius: 10%;
+    //   filter: drop-shadow(-3px -3px 8px rgba(0, 0, 0, 1));
+    // }
+    // &::before{
+    //   top: -12px;
+    //   left: -12px;
+    //   border-top-color: #569b56;
+    //   border-left-color: #569b56;
+    //   border-right-color: transparent;
+    //   border-bottom-color: transparent;
+    //   filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 1));
+    // }
+
+    &__perfil-img{
+      display: block;
       width: 100%;
-      height: 20em;
       object-fit: cover;
+      border-radius: 5px;
     }
+  }
+  &__texto-container{
+    color: $oscuro;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.8px;
+    text-align: left;
+    padding: 5em 16%;
+    font-style: italic;
+    font-weight: 400;
   }
 }
 
@@ -274,6 +343,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       border: 10px ridge rgb(255, 255, 255);
 
       &__img{
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -313,6 +383,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
         place-content: center;
 
         &__img{
+          display: block;
           width: 80%;
           max-height: 100vh;
           object-fit: cover;
@@ -344,6 +415,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
   &__banner-cont{
 
     &__img{
+      display: block;
       width: 100%;
       height: 20em;
       object-fit: cover;
@@ -525,6 +597,50 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       }
     }
   }
+
+  /* --------- BIOGRAFIA --------- */
+.biografia-body{
+  &__perfil-img-container{
+    position: relative;
+    min-width: 200px;
+    width: 40%;
+    max-width: 340px;
+    float: left;
+    margin: 0 19px 13px 0;
+    transform: none;
+    top: 0;
+    left: 0;
+
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      width: 10%;
+      height: 15%;
+      border-width: 8px;
+      border-style: groove;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: #569b56;
+      border-bottom-color: #569b56;
+      border-radius: 10%;
+      filter: drop-shadow(-3px -3px 8px rgba(0, 0, 0, 1));
+    }
+    &::before{
+      top: -12px;
+      left: -12px;
+      border-top-color: #569b56;
+      border-left-color: #569b56;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 1));
+    }
+  }
+  &__texto-container{
+    padding: 3em 5em;
+  }
+}
   /* --------- FOTOS --------- */
 .fotos-body{
 

@@ -6,6 +6,7 @@
 
 /* --------- VARIABLES --------- */
 $oscuro: #0C0C0C;
+$greenSuccess: #317f43;
 $rojoMolon: rgb(138, 16, 16);
 $rojoMolonResaltado: rgb(173, 21, 21);
 
@@ -138,7 +139,8 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 }
 
 /* --------- INICIO --------- */
-.inicio-body{
+/* ↓-↓-↓-↓-↓ COMPONENTE-Iniciobanner ↓-↓-↓-↓-↓ */
+.componente-iniciobanner-body{
   width: 100%;
   height: 100vh;
 
@@ -152,12 +154,87 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     }
   }
 }
+/* ↑-↑-↑-↑-↑ COMPONENTE-Iniciobanner ↑-↑-↑-↑-↑ */
+
+/* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
+.componente-video-body{
+  position: relative;
+  &__videoTag{
+    &__titulo{
+      top: 8%;
+      left: 0;
+      z-index: 1;
+      position: absolute;
+      color: #fff;
+      font-size: 0.9em;
+      text-decoration: none;
+      font-weight: 900;
+      transition: 0.25s;
+      cursor: pointer;
+
+      &:hover{
+        transition: 0.25s;
+        transform: scale(1.1);
+      }
+    }
+    &__play-btn{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 4em;
+      z-index: 1;
+      position: absolute;
+      transition: 0.25s;
+      cursor: pointer;
+
+      &:hover{
+        transition: 0.25s;
+        transform: translate(-50%, -50%) scale(1.4);
+      }
+      &:active{
+        transform: translate(-50%, -50%) scale(0.9);
+      }
+    }
+    &__subtitulo{
+      bottom: 8%;
+      right: 0;
+      z-index: 1;
+      position: absolute;
+      color: #fff;
+      font-size: 0.9em;
+      text-decoration: none;
+      font-weight: 900;
+      transition: 0.25s;
+      cursor: pointer;
+
+      &:hover{
+        transition: 0.25s;
+        transform: scale(1.1);
+        color: rgb(233, 233, 233);
+      }
+    }
+    &__link{
+      &__video{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+  &__iframe{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}  
+/* ↑-↑-↑-↑-↑ COMPONENTE-InicioVideo ↑-↑-↑-↑-↑ */
 
 /* --------- MUSICA --------- */
 .musica-body{
-
   &__banner-cont{
-
     &__img{
       display: block;
       width: 100%;
@@ -165,9 +242,12 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       object-fit: cover;
     }
   }
+}
 
+/* ↓-↓-↓-↓-↓ COMPONENTE-Musicacdcomprar ↓-↓-↓-↓-↓ */
+.componente-musicacdcomprar-body{
   &__ultimo-disco-container{
-    padding: 50px 0 50px 0;
+    padding: 0 0 50px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -239,12 +319,12 @@ $rojoMolonResaltado: rgb(173, 21, 21);
           }
         }
         
-
       }
-      
     }
   }
 }
+  /* ↑-↑-↑-↑-↑ COMPONENTE-Musicacdcomprar ↑-↑-↑-↑-↑ */
+
 /* --------- BIOGRAFIA --------- */
 .biografia-body{
   position: relative;
@@ -275,8 +355,9 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     top: 15em;
     left: 50%;
     transform: translateX(-50%);
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.7));
 
-    //Necesito consejo para decidir si queda mejor con los bordes esos en modo movil o solo cuando se hace mas grande de 500px aprox
+    // Necesito consejo para decidir si queda mejor con los bordes esos en modo movil o solo cuando se hace mas grande de 500px aprox
     // &::after, &::before{
     //   content: '';
     //   position: absolute;
@@ -291,7 +372,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     //   border-right-color: #569b56;
     //   border-bottom-color: #569b56;
     //   border-radius: 10%;
-    //   filter: drop-shadow(-3px -3px 8px rgba(0, 0, 0, 1));
+    //   filter: drop-shadow(-3px -3px 3px rgba(0, 0, 0, 0.2));
     // }
     // &::before{
     //   top: -12px;
@@ -300,7 +381,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     //   border-left-color: #569b56;
     //   border-right-color: transparent;
     //   border-bottom-color: transparent;
-    //   filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 1));
+    //   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
     // }
 
     &__perfil-img{
@@ -411,15 +492,130 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 
 /* --------- CONTACTO --------- */
 .contacto-body{
+  padding: 4em 2em;
 
-  &__banner-cont{
+  &__frase-container{
+    &__span{
+      color: #000;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
 
-    &__img{
-      display: block;
-      width: 100%;
-      height: 20em;
-      object-fit: cover;
+      &:hover{
+        color: rgb(80, 80, 80);
+        
+        &::after{
+          content: '✆';
+          position: absolute;
+          color:#03C100;
+          top: -100%;
+          right: 0;
+          font-size: 1.5em;
+          transform: rotate(-90deg);
+          background-color: #fff;
+          width: 20px;
+          height: 30px;
+        }
+      }
+      &:active{
+        color: #000;
+      }
     }
+  }
+  &__form-container{
+    &__form{
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      
+      &__div{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 10px 0;
+        width: 100%;
+        height: 240px;
+
+        &__label{
+          font-size: 1.1em;
+          font-weight: 500;
+          margin-top: 5px;
+        }
+        &__input{
+          border: 1px solid $oscuro;
+          border-radius: 4px;
+          background-color: rgb(235, 235, 235);
+          resize: none;
+          font-family: 'Oswald', sans-serif;
+          letter-spacing: 0.6px;
+        }
+        &__span{
+          color: $greenSuccess;
+          font-size: 1.3em;
+        }
+      }
+      &__button-container{
+        width: 100%;
+        height: 100px;
+        display: grid;
+        align-items: center;
+
+        &__btn{
+          cursor: pointer;
+          position: relative;
+          border: 2px solid $oscuro;
+          border-radius: 4px;
+          background-color: $oscuro;
+          color: #fff;
+          padding: 15px;
+          font-size: 1em;
+          font-family: 'Oswald', sans-serif;
+          transition: 800ms ease all;
+          
+          &:hover{
+            color: $oscuro;
+            background-color: #fff;
+            border: 2px solid $oscuro;
+            border-top: transparent;
+            border-bottom: transparent;
+            background: transparent;
+            color: #000;
+            box-shadow:
+            -7px -7px 20px 0px #fff9,
+            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002,
+            4px 4px 5px 0px #0001;
+          }
+          &::before, &::after{
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            width:0;
+            background: #000;
+            transition:400ms ease all;
+          }
+          &::after{
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+          }
+          &:hover::after, &:hover::before{
+            width: 100%;
+            transition: 800ms ease all;
+          }
+        }
+      }
+    }
+  }
+}
+.form-enviado{
+  background-color: $greenSuccess;
+
+  &:hover{
+    background-color: $greenSuccess;
   }
 }
 /* --------- FOOTER --------- */
@@ -511,6 +707,25 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 
 
 //MEDIA QUERIES
+//extra-small devices (only if it's necesary)
+@media (max-width: 274px) {
+  /* --------- INICIO --------- */
+  /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
+  .componente-video-body{
+    &__videoTag{
+      &__titulo{
+        font-size: 0.5em;
+      }
+      &__play-btn{
+        font-size: 2em;
+      }
+      &__subtitulo{
+        font-size: 0.5em;
+      }
+    }
+  }  
+  /* ↑-↑-↑-↑-↑ COMPONENTE-InicioVideo ↑-↑-↑-↑-↑ */
+}
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 
@@ -579,8 +794,34 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       display: none;
     }
   }
+  /* --------- INICIO --------- */
+  /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
+  .componente-video-body{
+    &__videoTag{
+      &__titulo{
+        font-size: 1.8em;
+      }
+      &__play-btn{
+        font-size: 8em;
+      }
+      &__subtitulo{
+        font-size: 1.8em;
+      }
+      &__link{
+        &__video{
+          display: block;
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }
+      }
+    }
+  }  
+  /* ↑-↑-↑-↑-↑ COMPONENTE-InicioVideo ↑-↑-↑-↑-↑ */
+
   /* --------- MUSICA --------- */
-  .musica-body{
+  /* ↓-↓-↓-↓-↓ COMPONENTE-Musicacdcomprar ↓-↓-↓-↓-↓ */
+  .componente-musicacdcomprar-body{
     &__ultimo-disco-container{
       padding: 120px 0 120px 0;
 
@@ -597,73 +838,106 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       }
     }
   }
+  /* ↑-↑-↑-↑-↑ COMPONENTE-Musicacdcomprar ↑-↑-↑-↑-↑ */
 
   /* --------- BIOGRAFIA --------- */
-.biografia-body{
-  &__perfil-img-container{
-    position: relative;
-    min-width: 200px;
-    width: 40%;
-    max-width: 340px;
-    float: left;
-    margin: 0 19px 13px 0;
-    transform: none;
-    top: 0;
-    left: 0;
+  .biografia-body{
+    &__perfil-img-container{
+      position: relative;
+      min-width: 200px;
+      width: 40%;
+      max-width: 340px;
+      float: left;
+      margin: 0 19px 13px 0;
+      transform: none;
+      top: 0;
+      left: 0;
 
-    &::after, &::before{
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      right: -12px;
-      width: 10%;
-      height: 15%;
-      border-width: 8px;
-      border-style: groove;
-      border-top-color: transparent;
-      border-left-color: transparent;
-      border-right-color: #569b56;
-      border-bottom-color: #569b56;
-      border-radius: 10%;
-      filter: drop-shadow(-3px -3px 8px rgba(0, 0, 0, 1));
+      &::after, &::before{
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        right: -12px;
+        width: 10%;
+        height: 15%;
+        border-width: 8px;
+        border-style: groove;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: #569b56;
+        border-bottom-color: #569b56;
+        border-radius: 10%;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+      }
+      &::before{
+        top: -12px;
+        left: -12px;
+        border-top-color: #569b56;
+        border-left-color: #569b56;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+      }
     }
-    &::before{
-      top: -12px;
-      left: -12px;
-      border-top-color: #569b56;
-      border-left-color: #569b56;
-      border-right-color: transparent;
-      border-bottom-color: transparent;
-      filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 1));
+    &__texto-container{
+      padding: 3em 5em;
     }
   }
-  &__texto-container{
-    padding: 3em 5em;
-  }
-}
   /* --------- FOTOS --------- */
-.fotos-body{
+  .fotos-body{
 
-  &__contenido{
-    &__ver-img-orig{
-      &__btn-cerrar{
-        &__bar1, &__bar2{
-          top: 25px;
-          right: 10%;
-          width: 50px;
-          height: 12px;
-          border-radius: 10px;
+    &__contenido{
+      &__ver-img-orig{
+        &__btn-cerrar{
+          &__bar1, &__bar2{
+            top: 25px;
+            right: 10%;
+            width: 50px;
+            height: 12px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  /* --------- CONTACTO --------- */
+  .contacto-body{
+    padding: 4em 2em;
+
+    &__form-container{
+      &__form{
+        &__div{
+          width: 80%;
+        }
+        &__button-container{
+          width: 80%;
         }
       }
     }
   }
 }
-}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  /* --------- INICIO --------- */
+  /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
+  .componente-video-body{
+    &__videoTag{
+      &__titulo{
+        font-size: 2.2em;
+      }
+      &__play-btn{
+        font-size: 12em;
+      }
+      &__subtitulo{
+        font-size: 2.2em;
+      }
+    }
+  }  
+  /* ↑-↑-↑-↑-↑ COMPONENTE-InicioVideo ↑-↑-↑-↑-↑ */
 
   /* --------- MUSICA --------- */
-  .musica-body{
+  /* ↓-↓-↓-↓-↓ COMPONENTE-Musicacdcomprar ↓-↓-↓-↓-↓ */
+  .componente-musicacdcomprar-body{
     &__ultimo-disco-container{
 
       &__img-container{
@@ -679,6 +953,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       }
     }
   }
+/* ↑-↑-↑-↑-↑ COMPONENTE-Musicacdcomprar ↑-↑-↑-↑-↑ */
 
   /* --------- FOTOS --------- */
   .fotos-body{
@@ -695,7 +970,21 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       }
     }
   }
+  /* --------- CONTACTO --------- */
+  .contacto-body{
+    padding: 4em 5em;
 
+    &__form-container{
+      &__form{
+        &__div{
+          width: 80%;
+        }
+        &__button-container{
+          width: 80%;
+        }
+      }
+    }
+  }
   /* --------- FOOTER --------- */
   .footer-body{
     &__container{
@@ -738,8 +1027,27 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       
     }
   }
+
+  /* --------- INICIO --------- */
+  /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
+  .componente-video-body{
+    &__videoTag{
+      &__titulo{
+        font-size: 2.6em;
+      }
+      &__play-btn{
+        font-size: 13em;
+      }
+      &__subtitulo{
+        font-size: 2.6em;
+      }
+    }
+  }  
+  /* ↑-↑-↑-↑-↑ COMPONENTE-InicioVideo ↑-↑-↑-↑-↑ */
+
   /* --------- MUSICA --------- */
-  .musica-body{
+  /* ↓-↓-↓-↓-↓ COMPONENTE-Musicacdcomprar ↓-↓-↓-↓-↓ */
+  .componente-musicacdcomprar-body{
     &__ultimo-disco-container{
 
       &__img-container{
@@ -755,6 +1063,8 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       }
     }
   }
+  /* ↑-↑-↑-↑-↑ COMPONENTE-Musicacdcomprar ↑-↑-↑-↑-↑ */
+
   /* --------- FOTOS --------- */
   .fotos-body{
 
@@ -774,6 +1084,23 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  /* --------- INICIO --------- */
+  /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
+  .componente-video-body{
+    &__videoTag{
+      &__titulo{
+        font-size: 3em;
+      }
+      &__play-btn{
+        font-size: 14em;
+      }
+      &__subtitulo{
+        font-size: 3em;
+      }
+    }
+  }  
+  /* ↑-↑-↑-↑-↑ COMPONENTE-InicioVideo ↑-↑-↑-↑-↑ */
+
   /* --------- FOTOS --------- */
   .fotos-body{
     &__contenido{
@@ -785,6 +1112,21 @@ $rojoMolonResaltado: rgb(173, 21, 21);
         margin: 40px;
         width: 250px;
         height: 250px;
+      }
+    }
+  }
+  /* --------- CONTACTO --------- */
+  .contacto-body{
+    padding: 6em 10em;
+
+    &__form-container{
+      &__form{
+        &__div{
+          width: 80%;
+        }
+        &__button-container{
+          width: 80%;
+        }
       }
     }
   }

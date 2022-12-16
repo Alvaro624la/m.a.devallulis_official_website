@@ -1,14 +1,16 @@
 import React from 'react';
-import banner from '../img/home-banner.jpg';
 import 'animate.css';
+import InicioBanner from './inicio/InicioBanner';
+import MusicaCdComprar from './musica/MusicaCdComprar';
+import InicioVideo from './inicio/InicioVideo';
 
 function Inicio() {
   return (
   <>
   <div className='inicio-body'>
-    <a className='inicio-body__banner-cont' href='#' target='_blank'>
-      <img className='inicio-body__banner-cont__img animate__animated animate__fadeInRight' src={banner}/>
-    </a>
+    <InicioBanner/>
+    <MusicaCdComprar/>
+    <InicioVideo/>
   </div>
   </>
   )

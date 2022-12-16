@@ -6,10 +6,8 @@ function Biografia() {
   return (
   <>
   <div className='biografia-body'>
-    <img className='biografia-body__banner-img' src={banner}/>
-    {/* <img className='biografia-body__perfil-img' src={perfil}/> */}
-    
-    <p className='biografia-body__texto-container'>
+    <img className='biografia-body__banner-img' src={banner}/>    
+    <div className='biografia-body__texto-container'>
     <div className='biografia-body__perfil-img-container'>
       <img className='biografia-body__perfil-img-container__perfil-img' src={perfil}/>
     </div>
@@ -20,7 +18,7 @@ function Biografia() {
     Nunc fermentum sagittis diam, et fermentum metus efficitur quis. Sed vel ultricies tortor, vitae tristique nibh. Quisque elementum tortor risus, eu ullamcorper mi facilisis quis. Morbi scelerisque metus velit, vel pharetra eros dapibus eget. Nulla ac ex ligula. Nulla tempus id nibh id varius. Vestibulum in sem mi. Praesent mollis sagittis eros, id iaculis purus tincidunt vel. Donec sed metus vitae tellus mollis sollicitudin. Vivamus vitae risus nec urna consectetur hendrerit. Maecenas mi urna, faucibus et risus non, feugiat porttitor risus. Aliquam hendrerit, metus nec hendrerit commodo, massa est sagittis arcu, quis elementum mauris nisi sed magna. In condimentum mi ex, id imperdiet libero consectetur eu. Vivamus vitae nibh sem.
 
     Vivamus hendrerit erat sed tortor tempor, quis bibendum lacus condimentum. Mauris interdum finibus diam, in mollis nibh imperdiet ultrices. Duis eleifend dictum mauris, eu pellentesque ante pulvinar sit amet. Morbi tincidunt volutpat lorem, sed aliquam nulla rutrum non. Etiam id porta orci. In rhoncus sed orci vel lacinia. Sed accumsan lorem eget risus accumsan vestibulum. Donec nec venenatis nunc, non porttitor ligula. Donec sodales magna lacus. Nunc in turpis a velit dapibus tincidunt. Curabitur non metus imperdiet, dignissim risus nec, lobortis nisl. Vestibulum dapibus in dui at pretium. Sed cursus ac odio sed consectetur.
-    </p>
+    </div>
   </div>
   </>
   )

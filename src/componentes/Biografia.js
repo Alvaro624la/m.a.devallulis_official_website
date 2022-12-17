@@ -9,7 +9,7 @@ function Biografia() {
     <img className='biografia-body__banner-img' src={banner}/>    
     <div className='biografia-body__texto-container'>
     <div className='biografia-body__perfil-img-container'>
-      <img className='biografia-body__perfil-img-container__perfil-img' src={perfil}/>
+      <img className='biografia-body__perfil-img-container__perfil-img' aria-label='Imagen de perfil del artista' src={perfil}/>
     </div>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend eros. Pellentesque eu placerat arcu, congue mattis quam. In erat orci, egestas sed porta in, auctor eget lacus. Sed nec sem fermentum, tincidunt leo eget, volutpat neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus, arcu non tempor mattis, elit nunc tincidunt augue, sit amet volutpat odio risus consectetur est. Nunc leo ligula, venenatis et erat in, commodo faucibus orci. Sed ultrices metus congue risus bibendum, in volutpat magna mattis. Donec eu leo tempus, malesuada elit quis, dignissim est. Phasellus rutrum lacus a arcu sollicitudin, eget maximus leo blandit.
     <br/>

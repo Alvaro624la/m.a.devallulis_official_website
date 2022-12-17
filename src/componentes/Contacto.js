@@ -54,9 +54,9 @@ function Contacto() {
         <textarea name="user_message"  value={userMessage}/>
         <input type="submit" value="Send" />
       </form> */}
-      <form ref={form} className='contacto-body__form-container__form' onSubmit={handleSubmit(onSubmit)}>
+      <form ref={form} className='contacto-body__form-container__form' aria-label='Formulario de contacto' onSubmit={handleSubmit(onSubmit)}>
         <div className={claseEsconderCampos}>
-          <label className='contacto-body__form-container__form__div__label'>Nombre</label>
+          <label className='contacto-body__form-container__form__div__label' aria-label='Titulo del campo de nombre'>Nombre</label>
           <input 
             className='contacto-body__form-container__form__div__input' 
             type='text' 
@@ -65,14 +65,14 @@ function Contacto() {
               maxLength: 50,
           })}
           />
-          <label className='contacto-body__form-container__form__div__label'>Email</label>
+          <label className='contacto-body__form-container__form__div__label' aria-label='Titulo del campo de email'>Email</label>
           <input 
             className='contacto-body__form-container__form__div__input' 
             type='email' 
             autoComplete='on' 
             {...register('user_email', {required: true})}
             />
-          <label className='contacto-body__form-container__form__div__label'>Mensaje</label>
+          <label className='contacto-body__form-container__form__div__label' aria-label='Titulo del campo de mensaje'>Mensaje</label>
           <textarea 
             className='contacto-body__form-container__form__div__input'  
             spellCheck='true'
@@ -82,7 +82,7 @@ function Contacto() {
         </div>
         <div className={claseMensajeExitoEnvio}><span className='contacto-body__form-container__form__div__span'>¡Mensaje enviado con éxito! Gracias.</span></div>
         <div className='contacto-body__form-container__form__button-container'>
-          <button disabled={btnDisabled} className={claseEnviarForm} type='submit'>Enviar</button>
+          <button disabled={btnDisabled} className={claseEnviarForm} aria-label='Boton para enviar el formulario' type='submit'>Enviar</button>
         </div>
       </form>
     </div>

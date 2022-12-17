@@ -28,13 +28,14 @@ function InicioVideo() {
             <a 
                 className='
                 componente-video-body__videoTag__titulo' 
+                aria-label='Link al videoclip del artista en Youtube'
                 href='https://www.youtube.com/watch?v=ogeLbJeV4_Q' 
                 target='_blank'>━━━ Ver videoclip entero
             </a>
             <FaRegPlayCircle 
                 className='componente-video-body__videoTag__play-btn'
                 onClick={playVideoYT}/>
-            <Link to='/musica'>
+            <Link to='/musica' aria-label='Link a la musica del artista'>
                 <div 
                     className='
                     componente-video-body__videoTag__subtitulo'
@@ -43,7 +44,8 @@ function InicioVideo() {
                 </div>
             </Link>
             <video 
-                className='componente-video-body__videoTag__link__video display-none' 
+                className='componente-video-body__videoTag__link__video display-none'
+                aria-label='Videoclip del artista' 
                 src={video1} 
                 preload='auto' 
                 autoPlay 
@@ -52,6 +54,7 @@ function InicioVideo() {
         </div>
         <iframe 
             className={claseIframe}
+            aria-label='Videoclip del artista en Youtube' 
             src={`https://www.youtube-nocookie.com/embed/ogeLbJeV4_Q${autoPlay}`}
             allowFullScreen
             importance='low'

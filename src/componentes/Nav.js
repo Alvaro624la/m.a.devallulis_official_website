@@ -42,16 +42,16 @@ function Nav() {
     <>
     <nav className='nav-container'>
       <div className='nav-container__logo'>
-        <NavLink to='/inicio'><img className='nav-container__logo__img' onClick={()=>sevariableRandomUseEffect(Math.random)} src={logo1}/></NavLink>
+        <NavLink to='/inicio'><img className='nav-container__logo__img' aria-label='Logo-link a Inicio' onClick={()=>sevariableRandomUseEffect(Math.random)} src={logo1}/></NavLink>
       </div>
       <div className='nav-container__barra' ref={refNav}>
-        <NavLink className='nav-container__barra__navlink' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/musica'>Música</NavLink>
-        <NavLink className='nav-container__barra__navlink' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/biografia'>Biografía</NavLink>
-        <NavLink className='nav-container__barra__navlink' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/fotos'>Fotos</NavLink>
-        <NavLink className='nav-container__barra__navlink' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/contacto'>Contacto</NavLink>
+        <NavLink className='nav-container__barra__navlink' aria-label='Link a Música' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/musica'>Música</NavLink>
+        <NavLink className='nav-container__barra__navlink' aria-label='Link a Biografía' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/biografia'>Biografía</NavLink>
+        <NavLink className='nav-container__barra__navlink' aria-label='Link a Fotos' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/fotos'>Fotos</NavLink>
+        <NavLink className='nav-container__barra__navlink' aria-label='Link a Contacto' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/contacto'>Contacto</NavLink>
       </div>
       <div className='nav-container__hamburguer-container'>
-        <div className='nav-container__hamburguer-cont__btn' onClick={abrirBurguer}>
+        <div className='nav-container__hamburguer-cont__btn' aria-label='Boton abrir/cerrar barra navegación' onClick={abrirBurguer}>
           <div className={barra}></div>
           <div className={barra}></div>
           <div className={barra}></div>
@@ -59,13 +59,13 @@ function Nav() {
       </div>
       <div className={burgerContent}>
         <div className='nav-container__hamburguer-content__logo-cont'>
-          <NavLink to='/inicio'><img className='nav-container__hamburguer-content__logo-cont__img' src={logo2}/></NavLink>
+          <NavLink to='/inicio'><img className='nav-container__hamburguer-content__logo-cont__img' aria-label='Logo-link a Inicio' src={logo2}/></NavLink>
         </div>
         <div className='nav-container__hamburguer-content__links-cont'>
-          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' to='/musica'>Música</NavLink>
-          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' to='/fotos'>Fotos</NavLink>
-          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' to='/biografia'>Biografía</NavLink>
-          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' to='/contacto'>Contacto</NavLink>
+          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' aria-label='Link a Música' to='/musica'>Música</NavLink>
+          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' aria-label='Link a Biografía' to='/fotos'>Fotos</NavLink>
+          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' aria-label='Link a Fotos' to='/biografia'>Biografía</NavLink>
+          <NavLink className='nav-container__hamburguer-content__links-cont__navlink' aria-label='Link a Contacto' to='/contacto'>Contacto</NavLink>
         </div>
       </div>
     </nav>

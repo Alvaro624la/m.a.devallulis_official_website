@@ -1,5 +1,5 @@
 import './App.scss';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom';
 import Nav from './componentes/Nav';
 import Inicio from './componentes/Inicio';
@@ -9,10 +9,36 @@ import Biografia from './componentes/Biografia';
 import Contacto from './componentes/Contacto';
 import Error404 from './componentes/Error404';
 import Footer from './componentes/Footer';
+import { PropagateLoader, MoonLoader, ScaleLoader } from "react-spinners";
 
 function App() {
+  
+  const [clasePageLoader , setClasePageLoader] = useState('page-loader');
+  const [claseBody, setClaseBody] = useState('display-none');
+  
+  try{
+    useEffect(() => {
+      const onPageLoad = () => {
+        console.log('page loaded');
+        setClasePageLoader('display-none');
+        setClaseBody('body');
+      };
+      // Comprobar si la página está cargada
+      if (document.readyState === 'complete') onPageLoad()
+      else {
+        console.log('page NO loaded');
+        window.addEventListener('load', onPageLoad, false);
+        // Eliminar EventListener cuando termina de ejecutarse el useEffect
+        return () => window.removeEventListener('load', onPageLoad);
+      }
+    }, []);
+  } catch(error){
+    console.warn(`App.js/pageloader Error --> ${error}`);
+  }
   return (
-    <div className='body'>
+    <>
+    <div className={clasePageLoader}><ScaleLoader color='#36d7b7' width={8} height={90} aria-label='spinner de carga'/></div>
+    <div className={claseBody}>
       <BrowserRouter>
         <Nav/>
         <Routes>
@@ -27,6 +53,7 @@ function App() {
       </BrowserRouter>
       <Footer/>
     </div>
+    </>
   );
 }
 

@@ -14,7 +14,7 @@ function Fotos() {
   //IMPORTAR TODAS LAS IMAGENES DE LA CARPETA '../img/DCIM/Originales'
   function importAll(r) {
     let imagenesOrig = {};
-    r.keys().map((item, index) => { imagenesOrig[item.replace('./', '')] = r(item); });
+    r.keys().map((item) => { imagenesOrig[item.replace('./', '')] = r(item); });
     return imagenesOrig;
   }
   const imagenesOrig = importAll(require.context('../img/DCIM/Originales', false, /\.(png|jpe?g|svg)$/i));
@@ -37,6 +37,7 @@ function Fotos() {
       {/*------Mostrar visualizador e img originales (HD) en DOM------*/}
       <div className={claseVisualizadorImgOrig} onClick={cerrarImgOrig}>
         {arrImgOrig.map((rutaImg, index)=>{
+          console.log(rutaImg);
           // const regExp1 = /(\d|\w)*\./i;
           // const regExp2 = /(png|jpe?g|svg)$/i;
           if(rutaActualClick == rutaImg){ //mejorar éste if para /.../i (que no importe .jpg o .JPG (includes lo he intentado y no sirve))
@@ -46,6 +47,7 @@ function Fotos() {
             <img 
               key={`div__img__${index}`} 
               className='fotos-body__contenido__ver-img-orig__div__img' 
+              aria-label={`Imagen nombrada como: ${rutaImg}`} 
               src={imagenesOrig[rutaImg]}
             />
           </div>
@@ -65,6 +67,7 @@ function Fotos() {
             <img 
             key={`div__img__${index}`} 
             className='fotos-body__contenido__div__img' 
+            aria-label={`Imagen nombrada como: ${rutaImg}`} 
             src={imagenesComp[rutaImg]}
             loading='lazy'
             onClick={()=>{

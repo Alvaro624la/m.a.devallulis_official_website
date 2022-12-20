@@ -9,7 +9,9 @@ function Inicio() {
   <>
   <div className='inicio-body'>
     <InicioBanner/>
-    <MusicaCdComprar/>
+    <div className='animate__animated animate__zoomIn'>
+      <MusicaCdComprar/>
+    </div>
     <InicioVideo/>
   </div>
   </>

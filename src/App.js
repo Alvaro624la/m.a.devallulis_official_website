@@ -9,7 +9,7 @@ import Biografia from './componentes/Biografia';
 import Contacto from './componentes/Contacto';
 import Error404 from './componentes/Error404';
 import Footer from './componentes/Footer';
-import { PropagateLoader, MoonLoader, ScaleLoader } from "react-spinners";
+import { ScaleLoader } from "react-spinners";
 
 function App() {
   
@@ -19,14 +19,14 @@ function App() {
   try{
     useEffect(() => {
       const onPageLoad = () => {
-        console.log('page loaded');
+        console.warn('Página cargada');
         setClasePageLoader('display-none');
         setClaseBody('body');
       };
       // Comprobar si la página está cargada
       if (document.readyState === 'complete') onPageLoad()
       else {
-        console.log('page NO loaded');
+        console.warn('Página pendiente de carga');
         window.addEventListener('load', onPageLoad, false);
         // Eliminar EventListener cuando termina de ejecutarse el useEffect
         return () => window.removeEventListener('load', onPageLoad);
@@ -37,7 +37,7 @@ function App() {
   }
   return (
     <>
-    <div className={clasePageLoader}><ScaleLoader color='#36d7b7' width={8} height={90} aria-label='spinner de carga'/></div>
+    <div className={clasePageLoader}><ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/></div>
     <div className={claseBody}>
       <BrowserRouter>
         <Nav/>

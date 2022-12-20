@@ -8,7 +8,7 @@ function Fotos() {
     r.keys().map((item, index) => { imagenesComp[item.replace('./', '')] = r(item); });
     return imagenesComp;
   }
-  const imagenesComp = importAll(require.context('../img/DCIM/Comprimidas_con-perdida', false, /\.(png|jpe?g|svg)$/i));
+  const imagenesComp = importAll(require.context('../img/DCIM/Poca-calidad', false, /\.(png|jpe?g|svg)$/i));
   const arrImgComp = Object.keys(imagenesComp);
 
   //IMPORTAR TODAS LAS IMAGENES DE LA CARPETA '../img/DCIM/Originales'
@@ -17,7 +17,7 @@ function Fotos() {
     r.keys().map((item) => { imagenesOrig[item.replace('./', '')] = r(item); });
     return imagenesOrig;
   }
-  const imagenesOrig = importAll(require.context('../img/DCIM/Originales', false, /\.(png|jpe?g|svg)$/i));
+  const imagenesOrig = importAll(require.context('../img/DCIM/HD', false, /\.(png|jpe?g|svg)$/i));
   const arrImgOrig = Object.keys(imagenesOrig);
 
   const [rutaActualClick, setRutaActualClick] = useState();

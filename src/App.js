@@ -10,9 +10,10 @@ import Contacto from './componentes/Contacto';
 import Error404 from './componentes/Error404';
 import Footer from './componentes/Footer';
 import { ScaleLoader } from "react-spinners";
+// import ContextoMADV from './componentes/contexto/Contexto';
 
 function App() {
-  
+
   const [clasePageLoader , setClasePageLoader] = useState('page-loader');
   const [claseBody, setClaseBody] = useState('display-none');
   
@@ -37,22 +38,24 @@ function App() {
   }
   return (
     <>
-    <div className={clasePageLoader}><ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/></div>
-    <div className={claseBody}>
-      <BrowserRouter>
-        <Nav/>
-        <Routes>
-          <Route path='/'           element={<Navigate to='/inicio'/>}></Route>
-          <Route path='/inicio'     element={<Inicio/>}></Route>
-          <Route path='/musica'     element={<Musica/>}></Route>
-          <Route path='/biografia'  element={<Biografia/>}></Route>
-          <Route path='/fotos'      element={<Fotos/>}></Route>
-          <Route path='/contacto'   element={<Contacto/>}></Route>
-          <Route path='/*'          element={<Error404/>}></Route>
-        </Routes>
-      </BrowserRouter>
-      <Footer/>
-    </div>
+    {/* <ContextoMADV> */}
+      <div className={clasePageLoader}><ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/></div>
+      <div className={claseBody}>
+        <BrowserRouter>
+          <Nav/>
+          <Routes>
+            <Route path='/'           element={<Navigate to='/inicio'/>}></Route>
+            <Route path='/inicio'     element={<Inicio/>}></Route>
+            <Route path='/musica'     element={<Musica/>}></Route>
+            <Route path='/biografia'  element={<Biografia/>}></Route>
+            <Route path='/fotos'      element={<Fotos/>}></Route>
+            <Route path='/contacto'   element={<Contacto/>}></Route>
+            <Route path='/*'          element={<Error404/>}></Route>
+          </Routes>
+        </BrowserRouter>
+        <Footer/>
+      </div>
+    {/* </ContextoMADV> */}
     </>
   );
 }

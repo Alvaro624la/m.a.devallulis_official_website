@@ -32,6 +32,9 @@ function Footer() {
         </div>
       </div>
     </div>
+    <div className='footer-body__creditos-pagina'>
+      <p className='footer-body__creditos-pagina__p'>Construida y diseñada por <a href='https://alvaro624la.github.io/Portfolio/' target='_blank'>Álvaro de Prado</a></p>
+    </div>
   </div>
   )
 }

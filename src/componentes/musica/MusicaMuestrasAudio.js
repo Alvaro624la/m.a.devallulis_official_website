@@ -16,13 +16,27 @@ function MusicaMuestrasAudio() {
                             // palabras acomnpañadas de - | palabra unica
     const regExp = /([A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚáéíóúÑñ]*(\-\w*)*)|([A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚáéíóúÑñ]*)/g;
     
-    const [clasePlay, setClasePlay] = useState('display-block');
-    const [clasePause, setClasePause] = useState('display-none');
+    // const [clasePlay, setClasePlay] = useState('display-block');
+    // const [clasePause, setClasePause] = useState('display-none');
+    // e => {
+    //     console.log(e.target.id.includes(index.toString()));
+    //     const a = e.target.id;
+    //     if(a.includes(index.toString())){
+    //     clasePlay === 'display-block' ? setClasePlay('display-none') : setClasePlay('display-block');
+    //     clasePause === 'display-block' ? setClasePause('display-none') : setClasePause('display-block');
+    //     }
+    // }
+    // const [playing, setPlaying] = useState(false);
+    // const togglePlay = () => setPlaying(!playing);
 
-    const playOrPause = (e) => {
-        console.log(e.target.className);
-        clasePlay === 'display-block' ? setClasePlay('display-none') : setClasePlay('display-block');
-        clasePause === 'display-block' ? setClasePause('display-none') : setClasePause('display-block');
+    const [playPause, setPlayPause] = useState(false);
+
+    const selectMuestra = (e) => {
+        // clasePlay === 'display-block' ? setClasePlay('display-none') : setClasePlay('display-block');
+        // clasePause === 'display-block' ? setClasePause('display-none') : setClasePause('display-block');
+        e.target.className.includes('muestra-play') 
+        ? e.target.className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause__izq__song-name'
+        : e.target.className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause__izq__song-name muestra-play'; 
     };
 
     return (
@@ -45,11 +59,25 @@ function MusicaMuestrasAudio() {
             {
                 muestrasArr.map((muestra, index)=>{
                     return <div key={`div-n_${index}`} className='componente-musicamuestrasaudio-body__escuchar__song-container'>
-                        <div className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause' onClick={playOrPause}>
-                            <div className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause__izq'>
-                                <FaPlay className={clasePlay} id={`play-num_${index}`} aria-label='Icono de play/reproducción de audio'/>
-                                <FaPause className={clasePause} id={`pause-num_${index}`} aria-label='Icono de pause/pausa de audio'/>
-                                <div className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause__izq__song-name' aria-label='Nombre de la muestra de audio'>
+                        <div className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause'>
+                            <div onClick={(e)=>{
+                                selectMuestra(e);
+                                const audioPlaying = new Audio(muestra);
+                                if(playPause){
+                                    console.log(`Pause ${muestra}${index}`)
+                                    setPlayPause(false);
+                                } else {
+                                    console.log(`Play ${muestra}${index}`);
+                                    setPlayPause(true);
+                                }
+                                // setPlaying(true);
+                                // console.log(playing);
+                                // playing ? audioPlaying.play() : audioPlaying.pause();
+                                
+                            }} className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause__izq'>
+                                {/* <FaPlay id={`div-n_${index}`} className={clasePlay} aria-label='Icono de play/reproducción de audio'/>
+                                <FaPause id={`div-n_${index}`} className={clasePause} aria-label='Icono de pause/pausa de audio'/> */}
+                                <div id={`div-n_${index}`} className='componente-musicamuestrasaudio-body__escuchar__song-container__play-pause__izq__song-name' aria-label='Nombre de la muestra de audio'>
                                     {muestra.match(regExp).join('').replace(/[-?_?]/g, ' ')}
                                 </div>
                             </div>
@@ -80,3 +108,10 @@ function MusicaMuestrasAudio() {
 }
 
 export default MusicaMuestrasAudio
+
+//falta:
+// funcionaliad ver icono play o pause al clickar individualmente cada título
+// resproducir muestra clickada
+//contexto: para objeto global de MADV para links y demás
+
+//cambiar background de FOTOS

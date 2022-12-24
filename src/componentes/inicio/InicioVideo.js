@@ -40,7 +40,7 @@ function InicioVideo() {
                     className='
                     componente-video-body__videoTag__subtitulo'
                     href='https://www.youtube.com/watch?v=ogeLbJeV4_Q' 
-                    target='_blank'>Hecha un vistazo a su último álbum ━━━
+                    target='_blank'>Echa un vistazo a su último álbum ━━━
                 </div>
             </Link>
             <video 

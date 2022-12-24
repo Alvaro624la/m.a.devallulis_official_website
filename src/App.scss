@@ -351,7 +351,6 @@ audio::-webkit-media-controls{
   align-items: flex-start;
   flex-wrap: wrap;
   color: #fff;
-  // padding: 5em 0;
 
   &__ver{
     display: flex;
@@ -383,7 +382,6 @@ audio::-webkit-media-controls{
     height: 100%;
 
     &__titulo{
-      // margin: 1em 0 0.5em 0;
       margin: 0 0 0.5em 0;
       font-size: 3em;
     }
@@ -426,6 +424,7 @@ audio::-webkit-media-controls{
             transition: 0.3s;
 
             &:hover{
+              cursor: pointer;
               opacity: 0.5;
               transition: 0.3s;
             }
@@ -438,6 +437,19 @@ audio::-webkit-media-controls{
       }
     }
   }
+}
+.muestra-play{
+  // transform: scale(0.95);
+  // opacity: 0.7;
+  color: $greenSuccess;
+  animation: resaltar 1.75s infinite;
+
+  @keyframes resaltar {
+    0%{filter: drop-shadow(0 0 4px #fff);}
+    40%{filter: drop-shadow(0 0 12px #fff);}
+    70%{filter: drop-shadow(0 0 12px #fff);}
+  }
+  
 }
 /* ↑-↑-↑-↑-↑ COMPONENTE-MusicaMuestrasAudio ↑-↑-↑-↑-↑ */
 
@@ -1260,6 +1272,11 @@ background-repeat: repeat-y;
         }
       }
     }
+    &__escuchar{
+      &__song-container{
+        width: 400px;
+      }
+  }
   }
   /* ↑-↑-↑-↑-↑ COMPONENTE-MusicaMuestrasAudio ↑-↑-↑-↑-↑ */
 

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaFacebook, FaInstagramSquare, FaSpotify, FaYoutube, FaItunes, FaSoundcloud, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
 import footerLogo from '../img/Logo_PNG_oscuro.png'
+import { ContextoMADV } from './contexto/Contexto';
 
 function Footer() {
+  const { MADV } = useContext(ContextoMADV);
   return (
   <div className='footer-body'>
     <div className='footer-body__container'>
@@ -14,8 +16,8 @@ function Footer() {
           <p className='footer-body__container__contactar-container__title__p' aria-label='Titulo. Contacto'>Contacto:</p>
         </div>
         <div className='footer-body__container__contactar-container__links'>
-          <div><a className='footer-body__container__contactar-container__links__a' aria-label='Número de teléfono' href='tel: 628251720'><FaPhoneAlt/> <span>628251720</span></a></div>
-          <div><a className='footer-body__container__contactar-container__links__a' aria-label='Email' href='mailto: alvarodepradomusica@gmail.com'><FaMailBulk/> <span>miguelangel@vallulis.com</span></a></div>
+          <div><a className='footer-body__container__contactar-container__links__a' aria-label='Número de teléfono' href={`tel: ${MADV.telefono}`}><FaPhoneAlt/> <span>{MADV.telefono}</span></a></div>
+          <div><a className='footer-body__container__contactar-container__links__a' aria-label='Email' href='mailto: alvarodepradomusica@gmail.com'><FaMailBulk/> <span>{MADV.email}</span></a></div>
         </div>
       </div>
       <div className='footer-body__container__seguir-container'>
@@ -23,12 +25,12 @@ function Footer() {
           <p className='footer-body__container__seguir-container__title__p' aria-label='Titulo. Seguir en redes sociales:'>Seguir en:</p>
         </div>
         <div className='footer-body__container__seguir-container__icons'>
-          <a href='https://www.facebook.com/miguelangel.devallulis' aria-label='Facebook logo-link' target='_blank'><FaFacebook/></a>
-          <a href='#' target='_blank' aria-label='Instagram logo-link'><FaInstagramSquare/></a>
-          <a href='#' target='_blank' aria-label='Spotify logo-link'><FaSpotify/></a>
-          <a href='https://www.youtube.com/@miguelangeldevallulis4374' target='_blank' aria-label='Youtube logo-link'><FaYoutube/></a>
-          <a href='#' target='_blank' aria-label='iTunes logo-link'><FaItunes/></a>
-          <a href='#' target='_blank' aria-label='SoundCloud logo-link'><FaSoundcloud/></a>
+          <a href={MADV.facebook} aria-label='Facebook logo-link' target='_blank'><FaFacebook/></a>
+          <a href={MADV.instagram} target='_blank' aria-label='Instagram logo-link'><FaInstagramSquare/></a>
+          <a href={MADV.spotify} target='_blank' aria-label='Spotify logo-link'><FaSpotify/></a>
+          <a href={MADV.youtube} target='_blank' aria-label='Youtube logo-link'><FaYoutube/></a>
+          <a href={MADV.itunes} target='_blank' aria-label='iTunes logo-link'><FaItunes/></a>
+          <a href={MADV.soundcloud} target='_blank' aria-label='SoundCloud logo-link'><FaSoundcloud/></a>
         </div>
       </div>
     </div>

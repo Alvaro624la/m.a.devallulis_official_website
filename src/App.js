@@ -10,7 +10,7 @@ import Contacto from './componentes/Contacto';
 import Error404 from './componentes/Error404';
 import Footer from './componentes/Footer';
 import { ScaleLoader } from "react-spinners";
-// import ContextoMADV from './componentes/contexto/Contexto';
+import ContextoMADV from './componentes/contexto/Contexto';
 
 function App() {
 
@@ -36,11 +36,12 @@ function App() {
   } catch(error){
     console.warn(`App.js/pageloader Error --> ${error}`);
   }
+  
   return (
     <>
-    {/* <ContextoMADV> */}
       <div className={clasePageLoader}><ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/></div>
       <div className={claseBody}>
+      <ContextoMADV>
         <BrowserRouter>
           <Nav/>
           <Routes>
@@ -54,8 +55,8 @@ function App() {
           </Routes>
         </BrowserRouter>
         <Footer/>
+      </ContextoMADV>
       </div>
-    {/* </ContextoMADV> */}
     </>
   );
 }

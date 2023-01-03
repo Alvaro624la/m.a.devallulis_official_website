@@ -338,9 +338,29 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 /* ↑-↑-↑-↑-↑ COMPONENTE-Musicacdcomprar ↑-↑-↑-↑-↑ */
 
 /* ↓-↓-↓-↓-↓ COMPONENTE-MusicaMuestrasAudio ↓-↓-↓-↓-↓ */
+// audio::-webkit-media-controls-panel{display: none;}
+// audio::-webkit-media-controls-mute-button{display: none;}
+// audio::-webkit-media-controls-play-button{display: none;}
+// audio::-webkit-media-controls-timeline-container{color: red;}
+// audio::-webkit-media-controls-timeline{background-color: red;}
+// audio::-webkit-media-controls-volume-slider-container{display: none;}
+// audio::-webkit-media-controls-volume-slider{background-color: red;}
+// audio::-webkit-media-controls-seek-back-button{display: none;}
+// audio::-webkit-media-controls-seek-forward-button{display: none;}
+// audio::-webkit-media-controls-fullscreen-button{display: none;}
+// audio::-webkit-media-controls-rewind-button{display: none;}
+// audio::-webkit-media-controls-return-to-realtime-button{display: none;}
+// audio::-webkit-media-controls-toggle-closed-captions-button{display: none;}
+audio{
+  height: 35px;
+  margin-right: 0.4em;
+  max-width: 222px;
+}
+audio::-webkit-media-controls-current-time-display{display: none;}
+audio::-webkit-media-controls-time-remaining-display{display: none;}
 audio::-webkit-media-controls{
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 .componente-musicamuestrasaudio-body{
   background-color: $oscuro;
@@ -357,17 +377,20 @@ audio::-webkit-media-controls{
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 2em 3em;
+    padding: 2em 0em;
     
     &__titulo{
       margin: 0 0 0.5em 0;
       font-size: 3em;
+      width: 100%;
+      text-align: center;
     }
     &__video{
       display: flex;
       justify-content: center;
       
       &__iframe{
+        padding-right: 1.5em;
         width: 100%;
         border: 0;
         height: 300px;
@@ -380,51 +403,56 @@ audio::-webkit-media-controls{
     flex-direction: column;
     width: 100%;
     height: 100%;
+    // border: 1px solid red;
 
     &__titulo{
       margin: 0 0 0.5em 0;
       font-size: 3em;
+      text-align: center;
     }
     &__song-container{
       display: flex;
       flex-direction: row;
       justify-content: start;
       align-items: center;
-      padding: 0.6em 0;
-      width: 100%;
+      padding: 0.25em 0;
+      // border: 1px solid rgb(0, 255, 98);
 
-      &__play-pause{
+      &__reproductor-audio{
         position: relative;
-        cursor: pointer;
         display: flex;
         flex-direction: row;
         align-items: center;
+        flex-wrap: nowrap;
         width: 100%;
+        // border: 1px solid rgb(255, 208, 77);
 
-        &__izq{
+        &__play-pause{
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
           justify-content: start;
           align-items: center;
           width: 100%;
+          // border: 2px solid rgb(255, 255, 255);
           
           &__song-name{
-            margin-left: 0.6em;
+            width: 170px;
+            // border: 2px solid rgb(222, 238, 5);
           }
         }
-        &__dcha{
+        &__redes{
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
-          margin-left: 0.4em;
+          // border: 1px solid rgb(0, 255, 34);
 
           &__a{
             color: #fff;
             transition: 0.3s;
+            cursor: pointer;
 
             &:hover{
-              cursor: pointer;
               opacity: 0.5;
               transition: 0.3s;
             }
@@ -450,6 +478,27 @@ audio::-webkit-media-controls{
     70%{filter: drop-shadow(0 0 12px #fff);}
   }
   
+}
+//media querie solo para componente muestras
+@media (max-width: 578px) {
+  .componente-musicamuestrasaudio-body{
+  &__escuchar{
+    &__song-container{
+      &__reproductor-audio{
+        flex-wrap: wrap;
+        
+        &__play-pause{
+          &__song-name{
+            margin: 0.25em 0 0.25em 0;
+          }
+        }
+        &__redes{
+          margin-top: 0.3em;
+        }
+      }
+    }
+  }
+}
 }
 /* ↑-↑-↑-↑-↑ COMPONENTE-MusicaMuestrasAudio ↑-↑-↑-↑-↑ */
 
@@ -533,7 +582,7 @@ audio::-webkit-media-controls{
 
 /* --------- FOTOS --------- */
 .fotos-body{
-background: url('./img/fondo-fotos4.jpg');
+background: url('./img/fondo-fotos5.jpg');
 background-size: cover;
 background-repeat: repeat-y;
 
@@ -553,6 +602,13 @@ background-repeat: repeat-y;
       width: 150px;
       height: 150px;
       border: 10px ridge rgb(255, 255, 255);
+      box-shadow: 12px 12px 12px 4px rgba(0, 0, 0, 0.6);
+      transition: all 0.1s;
+
+      &:hover{
+        box-shadow: 14px 14px 14px 4px rgba(0, 0, 0, 0.6);
+        transition: all 0.3s;
+      }
 
       &__img{
         display: block;
@@ -560,6 +616,7 @@ background-repeat: repeat-y;
         height: 100%;
         object-fit: cover;
         cursor: pointer;
+        transition: all 0.1s;
 
         &:hover{
           transform: scale(1.02);
@@ -1012,6 +1069,11 @@ background-repeat: repeat-y;
         margin: 0 0 0.5em 0;
         font-size: 3em;
       }
+      &__video{
+        &__iframe{
+          margin: 0 0 3em 0;
+        }
+      }
     }
     &__escuchar{
       padding: 0;
@@ -1267,7 +1329,7 @@ background-repeat: repeat-y;
     &__ver{
       &__video{
         &__iframe{
-          width: 500px;
+          width: 560px;
           height: 400px;
         }
       }

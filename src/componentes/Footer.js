@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { FaFacebook, FaInstagramSquare, FaSpotify, FaYoutube, FaItunes, FaSoundcloud, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
 import footerLogo from '../img/Logo_PNG_oscuro.png'
 import { ContextoMADV } from './contexto/Contexto';
@@ -41,4 +41,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;

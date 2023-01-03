@@ -1,9 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { useForm} from 'react-hook-form';
 import { init, sendForm } from 'emailjs-com';
+import { ContextoMADV } from './contexto/Contexto';
+
 init("alvaro_prueba");
 
 function Contacto() {
+  const { MADV } = useContext(ContextoMADV);
   const { register, formState: { errors }, watch, handleSubmit } = useForm();
 
   const [claseEnviarForm, setClaseEnviarForm] = useState('contacto-body__form-container__form__button-container__btn');
@@ -39,7 +42,7 @@ function Contacto() {
   <>
   <div className='contacto-body'>
     <div className='contacto-body__frase-container'>
-      <div>Contactar a través del móvil al <a href='tel: 628251720' className='contacto-body__frase-container__span'>628251720</a> o enviándole un mensaje personalizado:</div>
+    <div>Contactar a través del móvil al <a href={`tel: ${MADV.telefono}`} className='contacto-body__frase-container__span'>{MADV.telefono}</a> o enviándole un mensaje personalizado:</div>
     </div>
     <div className='contacto-body__form-container'>
       {/* <form 

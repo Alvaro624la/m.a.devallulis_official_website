@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 
 function Fotos() {
-
+  console.log('fotos cargado');
   //IMPORTAR TODAS LAS IMAGENES DE LA CARPETA '../img/DCIM/Comprimidas_sin-perdida'
-  function importAll(r) {
+  const importAllComp = (r) => {
     let imagenesComp = {};
     r.keys().map((item, index) => { imagenesComp[item.replace('./', '')] = r(item); });
     return imagenesComp;
   }
-  const imagenesComp = importAll(require.context('../img/DCIM/Poca-calidad', false, /\.(png|jpe?g|svg)$/i));
+  const imagenesComp = importAllComp(require.context('../img/DCIM/Poca-calidad', false, /\.(png|jpe?g|svg)$/i));
   const arrImgComp = Object.keys(imagenesComp);
 
   //IMPORTAR TODAS LAS IMAGENES DE LA CARPETA '../img/DCIM/Originales'
-  function importAll(r) {
+  const importAllHD = (r) => {
     let imagenesOrig = {};
     r.keys().map((item) => { imagenesOrig[item.replace('./', '')] = r(item); });
     return imagenesOrig;
   }
-  const imagenesOrig = importAll(require.context('../img/DCIM/HD', false, /\.(png|jpe?g|svg)$/i));
+  const imagenesOrig = importAllHD(require.context('../img/DCIM/HD', false, /\.(png|jpe?g|svg)$/i));
   const arrImgOrig = Object.keys(imagenesOrig);
 
   const [rutaActualClick, setRutaActualClick] = useState();
@@ -37,7 +37,7 @@ function Fotos() {
       {/*------Mostrar visualizador e img originales (HD) en DOM------*/}
       <div className={claseVisualizadorImgOrig} onClick={cerrarImgOrig}>
         {arrImgOrig.map((rutaImg, index)=>{
-          console.log(rutaImg);
+          // console.log(rutaImg);
           // const regExp1 = /(\d|\w)*\./i;
           // const regExp2 = /(png|jpe?g|svg)$/i;
           if(rutaActualClick == rutaImg){ //mejorar éste if para /.../i (que no importe .jpg o .JPG (includes lo he intentado y no sirve))
@@ -84,4 +84,4 @@ function Fotos() {
   )
 }
 
-export default Fotos
+export default React.memo(Fotos);

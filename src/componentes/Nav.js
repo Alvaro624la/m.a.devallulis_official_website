@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo1 from '../img/Logo_PNG_oscuro.png';
-import logo2 from '../img/Logo_JPG_blanco.jpg';
+import logo1 from '../img/Logo-PNG_V-negra.png';
+import logo2 from '../img/Logo_V-blanca.png';
 
 function Nav() {
   {/* ------ BURGUER BTN ------ */}
@@ -42,7 +42,7 @@ function Nav() {
     <>
     <nav className='nav-container'>
       <div className='nav-container__logo'>
-        <NavLink to='/inicio'><img className='nav-container__logo__img' aria-label='Logo-link a Inicio' onClick={()=>sevariableRandomUseEffect(Math.random)} src={logo1}/></NavLink>
+        <NavLink to='/'><img className='nav-container__logo__img' aria-label='Logo-link a Inicio' onClick={()=>sevariableRandomUseEffect(Math.random)} src={logo1}/></NavLink>
       </div>
       <div className='nav-container__barra' ref={refNav}>
         <NavLink className='nav-container__barra__navlink' aria-label='Link a Música' onClick={()=>sevariableRandomUseEffect(Math.random)} to='/musica'>Música</NavLink>
@@ -59,7 +59,7 @@ function Nav() {
       </div>
       <div className={burgerContent}>
         <div className='nav-container__hamburguer-content__logo-cont'>
-          <NavLink to='/inicio'><img className='nav-container__hamburguer-content__logo-cont__img' aria-label='Logo-link a Inicio' src={logo2}/></NavLink>
+          <NavLink to='/'><img className='nav-container__hamburguer-content__logo-cont__img' aria-label='Logo-link a Inicio' src={logo2}/></NavLink>
         </div>
         <div className='nav-container__hamburguer-content__links-cont'>
           <NavLink className='nav-container__hamburguer-content__links-cont__navlink' aria-label='Link a Música' to='/musica'>Música</NavLink>

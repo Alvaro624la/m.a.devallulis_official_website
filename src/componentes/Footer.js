@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react';
 import { FaFacebook, FaInstagramSquare, FaSpotify, FaYoutube, FaItunes, FaSoundcloud, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
-import footerLogo from '../img/Logo_PNG_oscuro.png'
+import footerLogo from '../img/Logo-PNG_V-negra.png'
 import { ContextoMADV } from './contexto/Contexto';
 
 function Footer() {
@@ -17,7 +17,7 @@ function Footer() {
         </div>
         <div className='footer-body__container__contactar-container__links'>
           <div><a className='footer-body__container__contactar-container__links__a' aria-label='Número de teléfono' href={`tel: ${MADV.telefono}`}><FaPhoneAlt/> <span>{MADV.telefono}</span></a></div>
-          <div><a className='footer-body__container__contactar-container__links__a' aria-label='Email' href='mailto: alvarodepradomusica@gmail.com'><FaMailBulk/> <span>{MADV.email}</span></a></div>
+          <div><a className='footer-body__container__contactar-container__links__a' aria-label='Email' href={`mailto: ${MADV.email}`}><FaMailBulk/> <span>{MADV.email}</span></a></div>
         </div>
       </div>
       <div className='footer-body__container__seguir-container'>

@@ -288,6 +288,9 @@ function MusicaMuestrasAudio() {
 export default React.memo(MusicaMuestrasAudio);
 
 //falta:
+
+
+//avanzado
 // funcionaliad ver icono play o pause al clickar individualmente cada título
 // resproducir solo muestra clickada
 //usar hook useMemo para componente fotos

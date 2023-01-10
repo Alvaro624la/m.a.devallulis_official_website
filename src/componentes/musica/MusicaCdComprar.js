@@ -1,5 +1,5 @@
 import React from 'react';
-import ultimoDisco from '../../img/caratula.png';
+import ultimoDisco from '../../img/caratula.jpg';
 
 
 function MusicaCdComprar() {

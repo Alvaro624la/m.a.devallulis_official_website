@@ -20,10 +20,12 @@ function InicioVideo() {
     return (
     <>
     <div 
-        className='componente-video-body 
-        animate__animated 
-        animate__fadeInLeft
-        animate__delay-1s'>
+        // className='componente-video-body 
+        // animate__animated 
+        // animate__fadeInLeft
+        // animate__delay-1s'
+        // >
+        className='componente-video-body'>
         <div className={claseVideoTag}>
             <a 
                 className='

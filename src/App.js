@@ -11,6 +11,7 @@ import Error404 from './componentes/Error404';
 import Footer from './componentes/Footer';
 import { ScaleLoader } from "react-spinners";
 import ContextoMADV from './componentes/contexto/Contexto';
+import vSpinner from './img/Logo-PNG_V-negra.png'
 
 function App() {
 
@@ -39,14 +40,19 @@ function App() {
   
   return (
     <>
-      <div className={clasePageLoader}><ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/></div>
+      <div className={clasePageLoader}>
+        <img class="page-loader__img1" src={vSpinner}/>
+        <ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/>
+        <img class="page-loader__img2" src={vSpinner}/>
+      </div>
       <div className={claseBody}>
       <ContextoMADV>
         <BrowserRouter>
           <Nav/>
           <Routes>
-            <Route path='/'           element={<Navigate to='/inicio'/>}></Route>
-            <Route path='/inicio'     element={<Inicio/>}></Route>
+            <Route path='/home'       element={<Navigate to='/'/>}></Route>
+            <Route path='/inicio'     element={<Navigate to='/'/>}></Route>
+            <Route path='/'           element={<Inicio/>}></Route>
             <Route path='/musica'     element={<Musica/>}></Route>
             <Route path='/biografia'  element={<Biografia/>}></Route>
             <Route path='/fotos'      element={<Fotos/>}></Route>

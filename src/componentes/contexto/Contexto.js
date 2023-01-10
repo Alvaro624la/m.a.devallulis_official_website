@@ -6,13 +6,13 @@ const Contexto = (props) => {
     
     const [MADV, setMADV] = useState({
         telefono: '628594461',
-        email: 'xxxxxx@vallulis.com',
+        email: 'v@miguelangeldevallulis.com',
         facebook: 'https://www.facebook.com/miguelangel.devallulis',
         instagram: 'xxxxxx',
         spotify: 'xxxxxx',
         youtube: 'https://www.youtube.com/@miguelangeldevallulis4374',
         itunes: 'xxxxxx',
-        soundcloud: 'xxxxxx'
+        soundcloud: 'xxxxxx',
     });
 
     return (

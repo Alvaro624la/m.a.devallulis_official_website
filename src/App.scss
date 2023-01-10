@@ -6,6 +6,8 @@
 
 
 /* --------- VARIABLES --------- */
+$fondo-comprar: url('./img/fondo-compraCD.jpg');
+$fondo-fotos: url('./img/fondo-fotos.jpg');
 $loader: #3c963c;
 $oscuro: #0C0C0C;
 $greenSuccess: #317f43;
@@ -39,6 +41,35 @@ $rojoMolonResaltado: rgb(173, 21, 21);
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
+
+  &__img1{
+    width: 140px;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    animation: V-loader1 0.6s infinite;
+  }
+  &__img2{
+    width: 140px;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    animation: V-loader2 0.6s infinite;
+  }
+}
+@keyframes V-loader1 {
+  0%{opacity: 0%;}
+  50%{opacity: 100%;}
+  100%{opacity: 0%;}
+}
+@keyframes V-loader2 {
+  0%{opacity: 100%;}
+  50%{opacity: 0%;}
+  100%{opacity: 100%;}
 }
 /* --------- NAVBAR --------- */
 .nav-container{
@@ -152,12 +183,19 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 }
 
 /* --------- INICIO --------- */
+.inicio-body{
+  background-image: $fondo-comprar;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0%;
+}
 /* ↓-↓-↓-↓-↓ COMPONENTE-Iniciobanner ↓-↓-↓-↓-↓ */
 .componente-iniciobanner-body{
   width: 100%;
   height: 100vh;
 
   &__banner-cont{
+    background-color: #000;
 
     &__img{
       display: block;
@@ -246,6 +284,10 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 
 /* --------- MUSICA --------- */
 .musica-body{
+  background-image: $fondo-comprar;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0%;
   &__banner-cont{
     &__img{
       display: block;
@@ -259,6 +301,10 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 /* ↓-↓-↓-↓-↓ COMPONENTE-Musicacdcomprar ↓-↓-↓-↓-↓ */
 .componente-musicacdcomprar-body{
   &__ultimo-disco-container{
+    // background-image: $fondo-comprar;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-position: 0%;
     padding: 50px 0 50px 0;
     display: flex;
     flex-direction: row;
@@ -390,7 +436,7 @@ audio::-webkit-media-controls{
       justify-content: center;
       
       &__iframe{
-        padding-right: 1.5em;
+        // padding-right: 1.5em;
         width: 100%;
         border: 0;
         height: 300px;
@@ -401,6 +447,7 @@ audio::-webkit-media-controls{
     padding: 2em 3em;
     display: flex;
     flex-direction: column;
+    justify-items: center;
     width: 100%;
     height: 100%;
     // border: 1px solid red;
@@ -514,14 +561,14 @@ audio::-webkit-media-controls{
   }
   //imagen en medio de la pantalla, encima del texto
   // &__perfil-img-container__perfil-img{
-    // position: absolute;
-    // min-width: 200px;
-    // width: 40%;
-    // max-width: 340px;
-    // top: 15em;
-    // left: 50%;
-    // transform: translateX(-50%);
-    // border-radius: 40px;
+  //   position: absolute;
+  //   min-width: 200px;
+  //   width: 40%;
+  //   max-width: 340px;
+  //   top: 15em;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   border-radius: 40px;
   // }
   &__perfil-img-container{
     float: none;
@@ -529,7 +576,7 @@ audio::-webkit-media-controls{
     min-width: 200px;
     width: 40%;
     max-width: 340px;
-    top: 15em;
+    top: 11em;
     left: 50%;
     transform: translateX(-50%);
     filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.7));
@@ -582,15 +629,13 @@ audio::-webkit-media-controls{
 
 /* --------- FOTOS --------- */
 .fotos-body{
-background: url('./img/fondo-fotos5.jpg');
+background: $fondo-fotos;
 background-size: cover;
 background-repeat: repeat-y;
 
   &__contenido{
     position: relative;
-    margin-top: 3em;
-    margin-bottom: 2em;
-    padding: 1em;
+    padding: 4em 1em 2em 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

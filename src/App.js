@@ -17,6 +17,7 @@ function App() {
 
   const [clasePageLoader , setClasePageLoader] = useState('page-loader');
   const [claseBody, setClaseBody] = useState('display-none');
+  console.log(process.env.PUBLIC_URL);
   
   try{
     useEffect(() => {
@@ -47,7 +48,7 @@ function App() {
       </div>
       <div className={claseBody}>
       <ContextoMADV>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Nav/>
           <Routes>
             <Route path='/home'       element={<Navigate to='/'/>}></Route>
@@ -68,3 +69,11 @@ function App() {
 }
 
 export default App;
+
+//falta:
+
+//avanzado
+//javascript how detect finger to right (para esconder la haburguer nav)
+// funcionaliad ver icono play o pause al clickar individualmente cada título
+// resproducir solo muestra clickada
+//usar hook useMemo para componente fotos

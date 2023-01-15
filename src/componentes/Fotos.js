@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Fotos() {
-  console.log('fotos cargado');
+  // console.log('fotos cargado');
   //IMPORTAR TODAS LAS IMAGENES DE LA CARPETA '../img/DCIM/Comprimidas_sin-perdida'
   const importAllComp = (r) => {
     let imagenesComp = {};

@@ -1,4 +1,5 @@
-import React, { useContext, useMemo } from 'react';
+// import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 import { FaFacebook, FaInstagramSquare, FaSpotify, FaYoutube, FaItunes, FaSoundcloud, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
 import footerLogo from '../img/Logo-PNG_V-negra.png'
 import { ContextoMADV } from './contexto/Contexto';
@@ -25,17 +26,17 @@ function Footer() {
           <p className='footer-body__container__seguir-container__title__p' aria-label='Titulo. Seguir en redes sociales:'>Seguir en:</p>
         </div>
         <div className='footer-body__container__seguir-container__icons'>
-          <a href={MADV.facebook} aria-label='Facebook logo-link' target='_blank'><FaFacebook/></a>
-          <a href={MADV.instagram} target='_blank' aria-label='Instagram logo-link'><FaInstagramSquare/></a>
-          <a href={MADV.spotify} target='_blank' aria-label='Spotify logo-link'><FaSpotify/></a>
-          <a href={MADV.youtube} target='_blank' aria-label='Youtube logo-link'><FaYoutube/></a>
-          <a href={MADV.itunes} target='_blank' aria-label='iTunes logo-link'><FaItunes/></a>
-          <a href={MADV.soundcloud} target='_blank' aria-label='SoundCloud logo-link'><FaSoundcloud/></a>
+          <a href={MADV.facebook} aria-label='Facebook logo-link' target='_blank' rel="noreferrer noopener"><FaFacebook/></a>
+          <a href={MADV.instagram} target='_blank' rel="noreferrer noopener" aria-label='Instagram logo-link'><FaInstagramSquare/></a>
+          <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link'><FaSpotify/></a>
+          <a href={MADV.youtube} target='_blank' rel="noreferrer noopener" aria-label='Youtube logo-link'><FaYoutube/></a>
+          <a href={MADV.itunes} target='_blank' rel="noreferrer noopener" aria-label='iTunes logo-link'><FaItunes/></a>
+          <a href={MADV.soundcloud} target='_blank' rel="noreferrer noopener" aria-label='SoundCloud logo-link'><FaSoundcloud/></a>
         </div>
       </div>
     </div>
     <div className='footer-body__creditos-pagina'>
-      <p className='footer-body__creditos-pagina__p'>Construida y diseñada por <a href='https://alvaro624la.github.io/Portfolio/' target='_blank'>Álvaro de Prado</a></p>
+      <p className='footer-body__creditos-pagina__p'>Construida y diseñada por <a href='https://alvaro624la.github.io/Portfolio/' target='_blank' rel="noreferrer noopener">Álvaro de Prado</a></p>
     </div>
   </div>
   )

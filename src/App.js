@@ -42,9 +42,9 @@ function App() {
   return (
     <>
       <div className={clasePageLoader}>
-        <img class="page-loader__img1" src={vSpinner}/>
+        <img class="page-loader__img1" src={vSpinner} alt='spinner - cargando página'/>
         <ScaleLoader color='#3c963c' width={8} height={90} aria-label='spinner de carga'/>
-        <img class="page-loader__img2" src={vSpinner}/>
+        <img class="page-loader__img2" src={vSpinner} alt='spinner - cargando página'/>
       </div>
       <div className={claseBody}>
       <ContextoMADV>

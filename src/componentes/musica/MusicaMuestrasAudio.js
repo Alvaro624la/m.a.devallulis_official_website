@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useContext } from 'react';
+// import { useState } from 'react';
+// import { useEffect, useMemo, useCallback } from 'react';
 import audio1 from '../../mp3/1. Sombras Del Mes De Abril.mp3';
 import audio2 from '../../mp3/2. El Gato De Taranilla.mp3';
 import audio3 from '../../mp3/3. Corazones Que Calientan.mp3';
@@ -14,10 +16,13 @@ import audio12 from '../../mp3/12. Villalmonte Es Mi Pueblo.mp3';
 import audio13 from '../../mp3/13. Me Duermo En Tu Recuerdo.mp3';
 import audio14 from '../../mp3/14. Mi Virgen De La Velilla.mp3';
 
-import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown, FaVolumeMute, FaShoppingCart } from "react-icons/fa";
+// import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown, FaVolumeMute, FaShoppingCart } from "react-icons/fa";
 import { FaSpotify, FaItunes, FaSoundcloud  } from "react-icons/fa";
+import { ContextoMADV } from '../contexto/Contexto';
+
 
 function MusicaMuestrasAudio() {
+    const { MADV } = useContext(ContextoMADV);
 
     // const playAudio1 = useCallback((audio1)=>{
     //         const newAudio1 = new Audio(audio1);
@@ -58,7 +63,7 @@ function MusicaMuestrasAudio() {
 
     const audiosArr = [audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10, audio11, audio12, audio13, audio14];
     // palabras acomnpañadas de - o ' ' | palabra unica
-    const regExp = /([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*((\ \w*)|(\-\w*))*)|([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*)/g;
+    const regExp = /([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*((\s\w*)|(\s\w*))*)|([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*)/g;
     
 
     // const [clasePlay, setClasePlay] = useState('display-block');
@@ -71,15 +76,15 @@ function MusicaMuestrasAudio() {
     //     clasePause === 'display-block' ? setClasePause('display-none') : setClasePause('display-block');
     //     }
     // }
-    const [playPause, setPlayPause] = useState(false);
-    const audioaudiosArr = new Array();
+    // const [playPause, setPlayPause] = useState(false);
+    const audioaudiosArr = [];
     // const audio = useMemo(() => new Audio(src), [src]);
 
-    const cambiarAspecto = (e) => {
-        e.target.className.includes('muestra-play') 
-        ? e.target.className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__play-pause'
-        : e.target.className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__play-pause muestra-play';
-    };
+    // const cambiarAspecto = (e) => {
+    //     e.target.className.includes('muestra-play') 
+    //     ? e.target.className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__play-pause'
+    //     : e.target.className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__play-pause muestra-play';
+    // };
     // const play = (e) => {
     //     // e.target.children[0].currentSrc.play();
     //     audio1.play();
@@ -136,6 +141,7 @@ function MusicaMuestrasAudio() {
                 <p className='componente-musicamuestrasaudio-body__ver__titulo' aria-label='Titulo sección ver'>VER</p>
                 <div className='componente-musicamuestrasaudio-body__ver__video'>
                     <iframe 
+                        title='Youtube Videoclip - Viento Del Norte'
                         className='componente-musicamuestrasaudio-body__ver__video__iframe'
                         aria-label='Videoclip del artista en Youtube' 
                         src={`https://www.youtube-nocookie.com/embed/A4oLeO90LeY`}
@@ -212,19 +218,19 @@ function MusicaMuestrasAudio() {
                                         <source src={muestra}></source>
                                     </audio>
                             </div>
-                            <div className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes'>
-                            <a href='#' target='_blank' aria-label='Spotify logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
-                                <FaSpotify className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a__final-icon'/>
-                            </a>
-                            <a href='#' target='_blank' aria-label='iTunes logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
-                            <FaItunes className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a__final-icon'/>
-                            </a>
-                            <a href='#' target='_blank' aria-label='SoundCloud logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
-                            <FaSoundcloud className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a__final-icon'/>
-                            </a>
-                        </div>
+                            
                     </div>
-                    
+                    <div className='componente-musicamuestrasaudio-body__escuchar__song-container__redes'>
+                        <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
+                            <FaSpotify className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
+                        </a>
+                        <a href={MADV.itunes} target='_blank' rel="noreferrer noopener" aria-label='iTunes logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
+                        <FaItunes className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
+                        </a>
+                        <a href={MADV.soundcloud} target='_blank' rel="noreferrer noopener" aria-label='SoundCloud logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
+                        <FaSoundcloud className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
+                        </a>
+                    </div>
                 </div>
                 })
                 
@@ -251,13 +257,13 @@ function MusicaMuestrasAudio() {
             {audio1.match(regExp).join('').replace(/[-?_?]/g, ' ')}
             </div>
             <div className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes'>
-            <a href='#' target='_blank' aria-label='Spotify logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
+            <a href='#' target='_blank' rel="noreferrer" aria-label='Spotify logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
                 <FaSpotify className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a__final-icon'/>
             </a>
-            <a href='#' target='_blank' aria-label='iTunes logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
+            <a href='#' target='_blank' rel="noreferrer" aria-label='iTunes logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
             <FaItunes className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a__final-icon'/>
             </a>
-            <a href='#' target='_blank' aria-label='SoundCloud logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
+            <a href='#' target='_blank' rel="noreferrer" aria-label='SoundCloud logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a'>
             <FaSoundcloud className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__redes__a__final-icon'/>
             </a>
         </div>

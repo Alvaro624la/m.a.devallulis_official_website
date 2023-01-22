@@ -1,12 +1,17 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import banner from '../img/fondo-bio.jpg';
 import perfil from '../img/foto-perfil-bio.jpg';
 
 function Biografia() {
   return (
   <>
+  <Helmet>
+    <title>Biografía | Miguel Ángel de Vallulis</title>
+    <meta name="description" content="Descubre un poco más sobre Miguel Ángel" />
+  </Helmet>
   <div className='biografia-body'>
-    <img className='biografia-body__banner-img' src={banner}/>    
+    <img className='biografia-body__banner-img' src={banner} alt='banner'/>    
     <div className='biografia-body__texto-container'>
     <div className='biografia-body__perfil-img-container'>
       <img className='biografia-body__perfil-img-container__perfil-img' aria-label='Imagen de perfil del artista' src={perfil}/>

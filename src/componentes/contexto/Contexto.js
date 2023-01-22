@@ -4,15 +4,17 @@ export const ContextoMADV = React.createContext();
 
 const Contexto = (props) => {
     
-    const [MADV, setMADV] = useState({
+    const [MADV] = useState({
+        shopVallulis: 'https://shopvallulis.es',
+        shopVallulisVallulisCD: 'https://shopvallulis.es/inicio/20-vallulis-cd-album.html',
         telefono: '628594461',
         email: 'v@miguelangeldevallulis.com',
         facebook: 'https://www.facebook.com/miguelangel.devallulis',
-        instagram: 'xxxxxx',
-        spotify: 'xxxxxx',
+        instagram: 'https://www.instagram.com/miguelangeldevallulis/',
+        spotify: 'https://www.instagram.com/miguelangeldevallulis/',
         youtube: 'https://www.youtube.com/@miguelangeldevallulis4374',
-        itunes: 'xxxxxx',
-        soundcloud: 'xxxxxx',
+        itunes: 'https://www.instagram.com/miguelangeldevallulis/',
+        soundcloud: 'https://www.instagram.com/miguelangeldevallulis/',
     });
 
     return (

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'animate.css';
+import fallback from '../../img/fallback.jpg'
 import video1 from '../../videos/video1.mp4';
 import { FaRegPlayCircle } from "react-icons/fa";
 
@@ -32,7 +33,8 @@ function InicioVideo() {
                 componente-video-body__videoTag__titulo' 
                 aria-label='Link al videoclip del artista en Youtube'
                 href='https://www.youtube.com/watch?v=ogeLbJeV4_Q' 
-                target='_blank'>━━━ Ver videoclip entero
+                target='_blank'
+                rel="noreferrer noopener">━━━ Ver videoclip entero
             </a>
             <FaRegPlayCircle 
                 className='componente-video-body__videoTag__play-btn'
@@ -42,19 +44,26 @@ function InicioVideo() {
                     className='
                     componente-video-body__videoTag__subtitulo'
                     href='https://www.youtube.com/watch?v=ogeLbJeV4_Q' 
-                    target='_blank'>Echa un vistazo a su último álbum ━━━
+                    target='_blank'
+                    rel="noreferrer noopener">Echa un vistazo a su último álbum ━━━
                 </div>
             </Link>
             <video 
+                poster={fallback}
                 className='componente-video-body__videoTag__link__video display-none'
                 aria-label='Videoclip del artista' 
                 src={video1} 
                 preload='auto' 
                 autoPlay 
                 loop 
-                muted/>
+                muted
+                //for iOS Safari
+                defaultmuted
+                playsInline
+                />
         </div>
         <iframe 
+            title='Youtube Videoclip - Sombras del mes de Abril'
             className={claseIframe}
             aria-label='Videoclip del artista en Youtube' 
             src={`https://www.youtube-nocookie.com/embed/ogeLbJeV4_Q${autoPlay}`}

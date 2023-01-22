@@ -1,4 +1,5 @@
 import React, { useState, useRef, useContext } from 'react';
+import { Helmet } from "react-helmet";
 import { useForm} from 'react-hook-form';
 import { init, sendForm } from 'emailjs-com';
 import { ContextoMADV } from './contexto/Contexto';
@@ -7,7 +8,8 @@ init("alvaro_prueba");
 
 function Contacto() {
   const { MADV } = useContext(ContextoMADV);
-  const { register, formState: { errors }, watch, handleSubmit } = useForm();
+  // const { register, formState: { errors }, watch, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const [claseEnviarForm, setClaseEnviarForm] = useState('contacto-body__form-container__form__button-container__btn');
   const [claseEsconderCampos, setClaseEsconderCampos] = useState('contacto-body__form-container__form__div');
@@ -18,7 +20,7 @@ function Contacto() {
 
   const onSubmit = (data) => {
     console.log(JSON.stringify(data));
-    const dataObj = JSON.stringify(data); //{"nombre":"Ana","email":"sdfa@gmail.com","mensaje":"Hola Mundo"}
+    // const dataObj = JSON.stringify(data); //{"nombre":"Ana","email":"sdfa@gmail.com","mensaje":"Hola Mundo"}
     setClaseEnviarForm('contacto-body__form-container__form__button-container__btn form-enviado');
     setClaseEsconderCampos('display-none');
     setClaseMensajeExitoEnvio('contacto-body__form-container__form__div');
@@ -40,23 +42,15 @@ function Contacto() {
 
   return (
   <>
+  <Helmet>
+    <title>Contacto | Miguel Ángel de Vallulis</title>
+    <meta name="description" content="Envía un mensaje a Miguel Ángel de Vallulis" />
+  </Helmet>
   <div className='contacto-body'>
     <div className='contacto-body__frase-container'>
     <div>Contactar a través del móvil al <a href={`tel: ${MADV.telefono}`} className='contacto-body__frase-container__span'>{MADV.telefono}</a> o enviándole un mensaje personalizado:</div>
     </div>
     <div className='contacto-body__form-container'>
-      {/* <form 
-        ref={form} 
-        className='display-none' 
-        onSubmit={handleSubmit(onSubmit)}>
-        <label>Name</label>
-        <input type="text" name="user_name" value={userName}/>
-        <label>Email</label>
-        <input type="email" name="user_email"  value={userEmail}/>
-        <label>Message</label>
-        <textarea name="user_message"  value={userMessage}/>
-        <input type="submit" value="Send" />
-      </form> */}
       <form ref={form} className='contacto-body__form-container__form' aria-label='Formulario de contacto' onSubmit={handleSubmit(onSubmit)}>
         <div className={claseEsconderCampos}>
           <label className='contacto-body__form-container__form__div__label' aria-label='Titulo del campo de nombre'>Nombre</label>

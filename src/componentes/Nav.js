@@ -4,17 +4,17 @@ import logo1 from '../img/Logo-PNG_V-negra.png';
 import logo2 from '../img/Logo_V-blanca.png';
 
 function Nav() {
-  {/* ------ BURGUER BTN ------ */}
+  //------ BURGUER BTN ------ //
   const [barra, setBarra] = useState('nav-container__hamburguer-container__btn__bar');
   const [burgerContent, setburgerContent] = useState('nav-container__hamburguer-content esconder-burguer-content');
   const [clickEnBurguer, setclickEnBurguer] = useState(false);
 
-  {/* ------ nav-page indicator ------ */}
+  //------ nav-page indicator ------ //
   const refNav = useRef();
   const [variableForRandomUseEffect, setvariableForRandomUseEffect] = useState(window.location.pathname);
   
 
-  {/* ------ BURGUER BTN ------ */}
+  // ----- BURGUER BTN ------ //
   const mostrarBurguer = () => {
     setclickEnBurguer(true);
     setBarra('nav-container__hamburguer-container__btn__bar burger-barras')
@@ -27,11 +27,11 @@ function Nav() {
   }
   const abrirBurguer = () => clickEnBurguer ? esconderBurguer() : mostrarBurguer();
 
-  {/* ------ nav-page indicator ------ */}
+  //------ nav-page indicator ------ //
   useEffect(() => { 
     const rutaURL = window.location.pathname;   
     for (let i = 0; i < refNav.current.childNodes.length; i++) {
-      if(rutaURL == '/') refNav.current.childNodes[i].className='nav-container__barra__navlink'
+      if(rutaURL === '/') refNav.current.childNodes[i].className='nav-container__barra__navlink'
       else if(refNav.current.childNodes[i].href.includes(rutaURL) === true) refNav.current.childNodes[i].className='nav-container__barra__navlink nav-container__barra__navlink__clickEnNavLink';
       else refNav.current.childNodes[i].className='nav-container__barra__navlink';
     };

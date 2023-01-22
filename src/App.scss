@@ -345,13 +345,13 @@ $rojoMolonResaltado: rgb(173, 21, 21);
             color: $oscuro;
             background-color: #fff;
             border: 2px solid $oscuro;
-            border-top: transparent;
-            border-bottom: transparent;
-            background: transparent;
+            border-top: #fff;
+            border-bottom: #fff;
+            background: #fff;
             color: #000;
             box-shadow:
-            -7px -7px 20px 0px #fff9,
-            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #fff9,
+            4px 4px 5px 0px #fff9,
             7px 7px 20px 0px #0002,
             4px 4px 5px 0px #0001;
           }
@@ -399,8 +399,7 @@ $rojoMolonResaltado: rgb(173, 21, 21);
 // audio::-webkit-media-controls-toggle-closed-captions-button{display: none;}
 audio{
   height: 35px;
-  margin-right: 0.4em;
-  max-width: 222px;
+  width: 60%;
 }
 audio::-webkit-media-controls-current-time-display{display: none;}
 audio::-webkit-media-controls-time-remaining-display{display: none;}
@@ -458,12 +457,13 @@ audio::-webkit-media-controls{
       text-align: center;
     }
     &__song-container{
+      width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: start;
+      justify-content: flex-start;
       align-items: center;
       padding: 0.25em 0;
-      // border: 1px solid rgb(0, 255, 98);
+      // border: 1px solid rgb(247, 0, 255);
 
       &__reproductor-audio{
         position: relative;
@@ -478,7 +478,7 @@ audio::-webkit-media-controls{
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
-          justify-content: start;
+          justify-content: flex-start;
           align-items: center;
           width: 100%;
           // border: 2px solid rgb(255, 255, 255);
@@ -488,7 +488,8 @@ audio::-webkit-media-controls{
             // border: 2px solid rgb(222, 238, 5);
           }
         }
-        &__redes{
+      }
+      &__redes{
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
@@ -509,7 +510,6 @@ audio::-webkit-media-controls{
             }
           }
         }
-      }
     }
   }
 }
@@ -528,21 +528,32 @@ audio::-webkit-media-controls{
 }
 //media querie solo para componente muestras
 @media (max-width: 578px) {
-  .componente-musicamuestrasaudio-body{
+audio{
+  height: 35px;
+  width: 100%;
+}
+.componente-musicamuestrasaudio-body{
   &__escuchar{
     &__song-container{
+      flex-wrap: wrap;
+      justify-content: center;
+
       &__reproductor-audio{
         flex-wrap: wrap;
-        
+
         &__play-pause{
+          flex-wrap: wrap;
+          justify-content: center;
+          
           &__song-name{
             margin: 0.25em 0 0.25em 0;
+            text-align: center;
           }
         }
-        &__redes{
+      }
+      &__redes{
           margin-top: 0.3em;
         }
-      }
     }
   }
 }
@@ -736,19 +747,6 @@ background-repeat: repeat-y;
 
       &:hover{
         color: rgb(80, 80, 80);
-        
-        &::after{
-          content: '✆';
-          position: absolute;
-          color:#03C100;
-          top: -100%;
-          right: 0;
-          font-size: 1.5em;
-          transform: rotate(-90deg);
-          background-color: #fff;
-          width: 20px;
-          height: 30px;
-        }
       }
       &:active{
         color: #000;
@@ -870,6 +868,7 @@ background-repeat: repeat-y;
       
       &__logo{
         width: 150px;
+        height: 147px; // arreglar problema CSS ¿imagen se deforma hacia abajo en Safari?
       }
     }
     &__contactar-container{
@@ -989,6 +988,13 @@ background-repeat: repeat-y;
 
 //MEDIA QUERIES
 //extra-small devices (only if it's necesary)
+@media (max-width: 140px) {
+  /* ↓-↓-↓-↓-↓ COMPONENTE-MusicaMuestrasAudio ↓-↓-↓-↓-↓ */
+  audio::-webkit-media-controls-timeline{
+    display: none;
+  }
+  /* ↑-↑-↑-↑-↑ COMPONENTE-MusicaMuestrasAudio ↑-↑-↑-↑-↑ */
+}
 @media (max-width: 274px) {
   /* --------- INICIO --------- */
   /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
@@ -1140,7 +1146,7 @@ background-repeat: repeat-y;
     padding: 5em 0;
 
     &__ver{
-      padding: 0;
+      padding: 0 1em;
       width: auto;
       
       &__titulo{
@@ -1155,9 +1161,10 @@ background-repeat: repeat-y;
     }
     &__escuchar{
       padding: 0;
-      width: auto;
+      width: 460px;
     }
   }
+  
   /* ↑-↑-↑-↑-↑ COMPONENTE-MusicaMuestrasAudio ↑-↑-↑-↑-↑ */
 
   /* --------- BIOGRAFIA --------- */
@@ -1220,9 +1227,36 @@ background-repeat: repeat-y;
       }
     }
   }
+
   /* --------- CONTACTO --------- */
   .contacto-body{
     padding: 4em 2em;
+
+    &__frase-container{
+      &__span{
+        color: #000;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+
+        &:hover{
+          color: rgb(80, 80, 80);
+          
+          &::after{
+            content: '✆';
+            position: absolute;
+            color:#03C100;
+            top: -100%;
+            right: 0;
+            font-size: 1.5em;
+            transform: rotate(-90deg);
+            background-color: #fff;
+            width: 20px;
+            height: 30px;
+          }
+        }
+      }
+    }
 
     &__form-container{
       &__form{
@@ -1407,7 +1441,7 @@ background-repeat: repeat-y;
     &__ver{
       &__video{
         &__iframe{
-          width: 560px;
+          width: 500px;
           height: 400px;
         }
       }

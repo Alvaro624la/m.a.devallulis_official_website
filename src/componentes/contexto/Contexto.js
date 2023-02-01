@@ -6,7 +6,7 @@ const Contexto = (props) => {
     
     const [MADV] = useState({
         shopVallulis: 'https://shopvallulis.es',
-        shopVallulisVallulisCD: 'https://shopvallulis.es/inicio/20-vallulis-cd-album.html',
+        shopVallulisVallulisCD: 'https://shopvallulis.es/index.php?id_product=20&rewrite=vallulis-cd-album&controller=product',
         telefono: '628594461',
         email: 'v@miguelangeldevallulis.com',
         facebook: 'https://www.facebook.com/miguelangel.devallulis',

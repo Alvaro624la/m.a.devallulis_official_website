@@ -1,5 +1,5 @@
 /* --------- GOOGLE FONTS --------- */
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 /* font-family: 'Passion One', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 /* font-family: 'Oswald', sans-serif; */
@@ -13,6 +13,10 @@ $oscuro: #0C0C0C;
 $greenSuccess: #317f43;
 $rojoMolon: rgb(138, 16, 16);
 $rojoMolonResaltado: rgb(173, 21, 21);
+$btnComprarCDMobil: 140px;
+$btnComprarCD576: 150px;
+$btnComprarCD768:  180px;
+$btnComprarCD992: 380px;
 
 /* --------- ICONS --------- */
 .imSoundcloud{
@@ -305,7 +309,8 @@ $rojoMolonResaltado: rgb(173, 21, 21);
     // background-size: cover;
     // background-attachment: fixed;
     // background-position: 0%;
-    padding: 50px 0 50px 0;
+    position: relative;
+    padding: 100px 0 100px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -326,7 +331,10 @@ $rojoMolonResaltado: rgb(173, 21, 21);
       display: flex;
       place-content: center;
       place-items: center;
-      &__a{
+
+      &__estirar{
+        position: relative; //usar para desplegar opciones de compra(las envuelve)
+        
         &__btn{
           position: relative;
           border: 2px solid $oscuro;
@@ -334,14 +342,14 @@ $rojoMolonResaltado: rgb(173, 21, 21);
           background-color: $oscuro;
           color: #fff;
           padding: 15px;
-          width: 140px;
+          width: $btnComprarCDMobil;
           height: 60px;
           font-size: 1em;
           font-family: 'Oswald', sans-serif;
           cursor: pointer;
           transition: 800ms ease all;
           
-          &:hover{
+          &:hover, &:active{
             color: $oscuro;
             background-color: #fff;
             border: 2px solid $oscuro;
@@ -376,8 +384,129 @@ $rojoMolonResaltado: rgb(173, 21, 21);
             transition: 800ms ease all;
           }
         }
-        
+        & a{
+          color: #000;
+          text-decoration: none;
+        }
+        &__desplegable-closed, &__desplegable-opened{
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          bottom: auto;
+          width: $btnComprarCDMobil;
+          transform: translateX(-50%);
+          z-index: 997;
+          
+          &__compraronlinebtn, &__comprartiendabtn{ 
+            padding: 10px;
+            display: block;
+            width: 100%;
+            border: 2px solid #000;
+            border-radius: 4px;
+            background-color: #c4c4c4;
+            color: #000;
+            text-align: left;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+            &:hover, &:active{
+              background-color: #fff;
+            }
+          }
+        }
+        &__desplegable-closed{
+          bottom: 0;
+          left: 50%;
+          transform: scaleY(0.000000001) translateX(-50%);
+          transition: transform 0.4s; // solo transform para inutilizar btns al instante
+          z-index: -1;
+        }
       }
+    }
+    &__modal-opened{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 1);
+      color: #000;
+      font-size: 1em;
+      z-index: 998;
+      opacity: 1;
+      transition: opacity 0.5s;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      place-items: center;
+      width: 90%;
+      border: 1px solid #000;
+      border-radius: 20px;
+      
+      &__btn-cerrar{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        cursor: pointer;
+
+        &__bar1, &__bar2{
+          background-color: #f00;
+          width: 30px;
+          $barsHeight: 4px;
+          height: $barsHeight; //height agranda a la dcha, por eso necesito translate a la izq
+          transform: rotateZ(45deg) translate(calc($barsHeight/1.5), calc($barsHeight/1.5));
+          border-radius: 3px;
+        }
+        &__bar2{
+          transform: rotateZ(-45deg);
+        }
+      }
+
+      &__izq{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__titulo{
+        }
+        &__logo{
+          width: 150px;
+        }
+        &__direccion{
+          padding: 1em;
+        }
+      }
+      &__dcha{
+
+        &__maps{
+          border: 0;
+          padding: 0;
+          margin: 0;
+          display: block;
+          width: 100%;
+          height: 200px;
+          padding-bottom: 1em;
+          border-radius: 10px;
+        }
+      }
+    }
+    &__modal-closed{
+      opacity: 0;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: -100%;
     }
   }
 }
@@ -629,7 +758,7 @@ audio{
   &__texto-container{
     color: $oscuro;
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     letter-spacing: 0.8px;
     text-align: left;
     padding: 5em 16%;
@@ -683,8 +812,8 @@ background-repeat: repeat-y;
     
     &__ver-img-orig{
       position: fixed;
-      top:50%;
-      left:50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
       background-color: $oscuro;
@@ -1133,8 +1262,28 @@ background-repeat: repeat-y;
       }
 
       &__btn-container{
-        &__a__btn{
-          width: 150px;
+        &__estirar{
+          &__btn{
+            width: $btnComprarCD576;
+          }
+          &__desplegable-closed, &__desplegable-opened{
+            width: $btnComprarCD576;
+          }
+        }
+      }
+      &__modal-opened{
+        width: 90%;
+  
+        &__izq{
+          &__logo{
+            width: 175px;
+          }
+        }
+        &__dcha{
+          &__maps{
+            width: 400px;
+            height: 300px;
+          }
         }
       }
     }
@@ -1208,6 +1357,7 @@ background-repeat: repeat-y;
     }
     &__texto-container{
       padding: 3em 5em;
+      font-size: 1.2em;
     }
   }
   /* --------- FOTOS --------- */
@@ -1302,9 +1452,17 @@ background-repeat: repeat-y;
       }
 
       &__btn-container{
-        &__a__btn{
-          width: 180px;
+        &__estirar{
+          &__btn{
+            width: $btnComprarCD768;
+          }
+          &__desplegable-closed, &__desplegable-opened{
+            width: $btnComprarCD768;
+          }
         }
+      }
+      &__modal-opened{
+        width: 80%;
       }
     }
   }
@@ -1428,8 +1586,28 @@ background-repeat: repeat-y;
       }
 
       &__btn-container{
-        &__a__btn{
-          width: 380px;
+        &__estirar{
+          &__btn{
+            width: $btnComprarCD992;
+          }
+          &__desplegable-closed, &__desplegable-opened{
+            width: $btnComprarCD992;
+          }
+        }
+      }
+      &__modal-opened{
+        width: 60%;
+      
+        &__izq{
+          &__logo{
+            width: 200px;
+          }
+        }
+        &__dcha{
+          &__maps{
+            width: 500px;
+            height: 400px;
+          }
         }
       }
     }

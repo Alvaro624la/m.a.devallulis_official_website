@@ -41,7 +41,8 @@ function Fotos() {
     <div className='fotos-body__contenido'>
       {/*------Mostrar visualizador e img originales (HD) en DOM------*/}
       <div className={claseVisualizadorImgOrig} onClick={cerrarImgOrig}>
-        {arrImgOrig.forEach((rutaImg, index)=>{
+        {arrImgOrig.map((rutaImg, index)=>{
+          // console.log(rutaActualClick);
           // console.log(rutaImg);
           // const regExp1 = /(\d|\w)*\./i;
           // const regExp2 = /(png|jpe?g|svg)$/i;
@@ -90,3 +91,5 @@ function Fotos() {
 }
 
 export default React.memo(Fotos);
+
+//  Line 44:41:  Array.prototype.map() expects a value to be returned at the end of arrow function  array-callback-return

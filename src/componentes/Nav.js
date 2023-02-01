@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo1 from '../img/Logo-PNG_V-negra.png';
-import logo2 from '../img/Logo_V-blanca.png';
+import logo2 from '../img/Logo_V-blanca.jpg';
 
 function Nav() {
   //------ BURGUER BTN ------ //

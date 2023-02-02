@@ -11,10 +11,12 @@ const Contexto = (props) => {
         email: 'v@miguelangeldevallulis.com',
         facebook: 'https://www.facebook.com/miguelangel.devallulis',
         instagram: 'https://www.instagram.com/miguelangeldevallulis/',
-        spotify: 'https://www.instagram.com/miguelangeldevallulis/',
+        spotify: '#',
         youtube: 'https://www.youtube.com/@miguelangeldevallulis4374',
-        itunes: 'https://www.instagram.com/miguelangeldevallulis/',
-        soundcloud: 'https://www.instagram.com/miguelangeldevallulis/',
+        appleMusic: '#',
+        amazonMusic: '#',
+        deezer: '#',
+        tidal: '#'
     });
 
     return (

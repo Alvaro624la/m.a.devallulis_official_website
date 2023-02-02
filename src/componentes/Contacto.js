@@ -48,7 +48,7 @@ function Contacto() {
   </Helmet>
   <div className='contacto-body'>
     <div className='contacto-body__frase-container'>
-    <div>Contactar a través del móvil al <a href={`tel: ${MADV.telefono}`} className='contacto-body__frase-container__span'>{MADV.telefono}</a> o enviándole un mensaje personalizado:</div>
+    <div>Contactar a través del móvil al <a href={`tel:${MADV.telefono}`} className='contacto-body__frase-container__span'>{MADV.telefono}</a> o enviándole un mensaje personalizado:</div>
     </div>
     <div className='contacto-body__form-container'>
       <form ref={form} className='contacto-body__form-container__form' aria-label='Formulario de contacto' onSubmit={handleSubmit(onSubmit)}>

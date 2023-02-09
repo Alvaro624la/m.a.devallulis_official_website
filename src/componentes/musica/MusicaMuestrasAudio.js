@@ -17,7 +17,7 @@ import audio13 from '../../mp3/13. Me Duermo En Tu Recuerdo.mp3';
 import audio14 from '../../mp3/14. Mi Virgen De La Velilla.mp3';
 
 // import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown, FaVolumeMute, FaShoppingCart } from "react-icons/fa";
-import { FaSpotify, FaItunes, FaSoundcloud  } from "react-icons/fa";
+import { FaSpotify, FaApple, FaAmazon } from "react-icons/fa";
 import { ContextoMADV } from '../contexto/Contexto';
 
 
@@ -224,11 +224,11 @@ function MusicaMuestrasAudio() {
                         <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
                             <FaSpotify className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
                         </a>
-                        <a href={MADV.itunes} target='_blank' rel="noreferrer noopener" aria-label='iTunes logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
-                        <FaItunes className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
+                        <a href={MADV.appleMusic} target='_blank' rel="noreferrer noopener" aria-label='iTunes logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
+                        <FaApple className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
                         </a>
-                        <a href={MADV.soundcloud} target='_blank' rel="noreferrer noopener" aria-label='SoundCloud logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
-                        <FaSoundcloud className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
+                        <a href={MADV.amazonMusic} target='_blank' rel="noreferrer noopener" aria-label='SoundCloud logo-link' className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a'>
+                        <FaAmazon className='componente-musicamuestrasaudio-body__escuchar__song-container__redes__a__final-icon'/>
                         </a>
                     </div>
                 </div>

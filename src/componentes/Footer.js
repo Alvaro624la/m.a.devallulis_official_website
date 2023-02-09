@@ -1,8 +1,8 @@
 // import React, { useContext, useMemo } from 'react';
 import React, { useContext } from 'react';
 import { FaFacebook, FaInstagramSquare, FaYoutube, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
-// import { FaSpotify, FaApple, FaAmazon, FaDeezer } from "react-icons/fa";
-// import { SiTidal } from "react-icons/si";
+import { FaSpotify, FaApple, FaAmazon, FaDeezer } from "react-icons/fa";
+import { SiTidal } from "react-icons/si";
 import footerLogo from '../img/Logo-PNG_V-negra.png'
 import { ContextoMADV } from './contexto/Contexto';
 
@@ -31,11 +31,11 @@ function Footer() {
           <a href={MADV.facebook} target='_blank' rel="noreferrer noopener" aria-label='Facebook logo-link'><FaFacebook/></a>
           <a href={MADV.instagram} target='_blank' rel="noreferrer noopener" aria-label='Instagram logo-link'><FaInstagramSquare/></a>
           <a href={MADV.youtube} target='_blank' rel="noreferrer noopener" aria-label='Youtube logo-link'><FaYoutube/></a>
-          {/* <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link'><FaSpotify/></a> */}
-          {/* <a href={MADV.appleMusic} target='_blank' rel="noreferrer noopener" aria-label='Apple Music logo-link'><FaApple/></a> */}
-          {/* <a href={MADV.amazonMusic} target='_blank' rel="noreferrer noopener" aria-label='Amazon Music logo-link'><FaAmazon/></a> */}
-          {/* <a href={MADV.deezer} target='_blank' rel="noreferrer noopener" aria-label='Deezer logo-link'><FaDeezer/></a> */}
-          {/* <a href={MADV.tidal} target='_blank' rel="noreferrer noopener" aria-label='Tidal logo-link'><SiTidal/></a> */}
+          <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link'><FaSpotify/></a>
+          <a href={MADV.appleMusic} target='_blank' rel="noreferrer noopener" aria-label='Apple Music logo-link'><FaApple/></a>
+          <a href={MADV.amazonMusic} target='_blank' rel="noreferrer noopener" aria-label='Amazon Music logo-link'><FaAmazon/></a>
+          <a href={MADV.deezer} target='_blank' rel="noreferrer noopener" aria-label='Deezer logo-link'><FaDeezer/></a>
+          <a href={MADV.tidal} target='_blank' rel="noreferrer noopener" aria-label='Tidal logo-link'><SiTidal/></a>
         </div>
       </div>
     </div>

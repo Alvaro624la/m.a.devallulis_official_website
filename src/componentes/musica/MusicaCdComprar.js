@@ -39,7 +39,7 @@ function MusicaCdComprar() {
                 <p className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__direccion'>Avda Mister Universo Juan Ferrero, 55 24880, Puente Almuhey León, España</p>
             </div>
             <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__dcha'>
-                <iframe title='Hotel Rio Cea en Google Maps' className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__dcha__maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2928.079012097044!2d-4.973858582556152!3d42.7866795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd482187c8a648d3%3A0x811124c527af1541!2sHotel%20R%C3%ADo%20Cea!5e0!3m2!1ses!2ses!4v1675263225782!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
+                <iframe title='Hotel Rio Cea en Google Maps' className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__dcha__maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2928.079012097044!2d-4.973858582556152!3d42.7866795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd482187c8a648d3%3A0x811124c527af1541!2sHotel%20R%C3%ADo%20Cea!5e0!3m2!1ses!2ses!4v1675263225782!5m2!1ses!2ses" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
             </div>
         </div>
         <div className='componente-musicacdcomprar-body__ultimo-disco-container__img-container'>

@@ -30,6 +30,22 @@ function Fotos() {
     setclaseVisualizadorImgOrig('display-none');
     setclaseBtnCerrarImgOrig('display-none');
   };
+  // ------ CREAR POLYFILL ------ //
+  // ------ DESACTIVAR ERROR DE ESLINT PARA CAMBIAR FUNCIONES NATIVAS, CON LA SIGUIENTE FRASE COMENTADA: ------ //
+  // eslint-disable-next-line no-extend-native
+  Array.prototype.alvaroMap = function(callback){
+    let result = [];
+    for(let index = 0; index < this.length; index++){
+      const el = this[index];
+      const elTransformado = callback(el, index);
+      result.push(elTransformado);
+    }
+    return result;
+  }
+  // COMPROBANDO EL POLYFILL:
+  // const a = [2, 3];
+  // console.log(a.map(callback => callback + 10));
+  // console.log(a.alvaroMap(callback => callback + 10));
 
   return (
   <>
@@ -41,7 +57,7 @@ function Fotos() {
     <div className='fotos-body__contenido'>
       {/*------Mostrar visualizador e img originales (HD) en DOM------*/}
       <div className={claseVisualizadorImgOrig} onClick={cerrarImgOrig}>
-        {arrImgOrig.map((rutaImg, index)=>{
+        {arrImgOrig.alvaroMap((rutaImg, index)=>{
           // console.log(rutaActualClick);
           // console.log(rutaImg);
           // const regExp1 = /(\d|\w)*\./i;
@@ -66,7 +82,7 @@ function Fotos() {
         </div>
       </div>
       {/*------Mostrar en DOM TODAS LAS IMAGENES DE arrImgComp------*/}
-      {arrImgComp.map((rutaImg, index)=>{
+      {arrImgComp.alvaroMap((rutaImg, index)=>{
         return <div 
           key={`div__${index}`} 
           className='fotos-body__contenido__div'>

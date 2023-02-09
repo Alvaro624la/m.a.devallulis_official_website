@@ -58,7 +58,7 @@ function InicioVideo() {
                 loop 
                 muted
                 //for iOS Safari
-                defaultmuted
+                defaultmuted="true"
                 playsInline
                 />
         </div>

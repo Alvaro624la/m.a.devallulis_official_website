@@ -596,7 +596,6 @@ audio::-webkit-media-controls{
       width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
       align-items: center;
       padding: 0.25em 0;
       // border: 1px solid rgb(247, 0, 255);
@@ -633,12 +632,12 @@ audio::-webkit-media-controls{
 
           &__a{
             color: #fff;
-            transition: 0.3s;
+            transition: 0.1s;
             cursor: pointer;
 
             &:hover{
               opacity: 0.5;
-              transition: 0.3s;
+              transition: 0.1s;
             }
 
             &__final-icon{
@@ -646,6 +645,25 @@ audio::-webkit-media-controls{
             }
           }
         }
+    }
+    &__links-div{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 1em;
+      // border: 10px solid #fff;
+
+      &__a{
+        font-size: 3em;
+        color: #fff;
+        transition: 0.1s;
+
+        &:hover{
+          opacity: 0.5;
+          transition: 0.1s;
+        }
+      }
     }
   }
 }
@@ -1320,6 +1338,12 @@ background-repeat: repeat-y;
     &__escuchar{
       padding: 0;
       width: 460px;
+      
+      &__links-div{
+        &__a{
+          font-size: 4em;
+        }
+      }
     }
   }
   
@@ -1635,11 +1659,6 @@ background-repeat: repeat-y;
         }
       }
     }
-    &__escuchar{
-      &__song-container{
-        width: 400px;
-      }
-  }
   }
   /* ↑-↑-↑-↑-↑ COMPONENTE-MusicaMuestrasAudio ↑-↑-↑-↑-↑ */
 

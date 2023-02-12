@@ -40,7 +40,7 @@ function Footer() {
       </div>
     </div>
     <div className='footer-body__creditos-pagina'>
-      <p className='footer-body__creditos-pagina__p'>Construida y diseñada por <a href='https://alvaro624la.github.io/Portfolio/' target='_blank' rel="noreferrer noopener">Álvaro de Prado</a></p>
+      <p className='footer-body__creditos-pagina__p'>Construida y diseñada por <a href='https://www.linkedin.com/in/alvaro-de-prado/' target='_blank' rel="noreferrer noopener">Álvaro de Prado</a></p>
     </div>
   </div>
   )

@@ -1577,22 +1577,6 @@ background-repeat: repeat-y;
   }
 
   /* --------- INICIO --------- */
-  /* ↓-↓-↓-↓-↓ COMPONENTE-Iniciobanner ↓-↓-↓-↓-↓ */
-  .componente-iniciobanner-body{
-    width: 100%;
-    height: 100vh;
-
-    &__banner-cont{
-      &__img{
-        display: block;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-      }
-    }
-  }
-  /* ↑-↑-↑-↑-↑ COMPONENTE-Iniciobanner ↑-↑-↑-↑-↑ */
-
   /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
   .componente-video-body{
     &__videoTag{
@@ -1682,6 +1666,21 @@ background-repeat: repeat-y;
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   /* --------- INICIO --------- */
+  /* ↓-↓-↓-↓-↓ COMPONENTE-Iniciobanner ↓-↓-↓-↓-↓ */
+  .componente-iniciobanner-body{
+    width: 100%;
+    height: 100vh;
+
+    &__banner-cont{
+      &__img{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+  /* ↑-↑-↑-↑-↑ COMPONENTE-Iniciobanner ↑-↑-↑-↑-↑ */
   /* ↓-↓-↓-↓-↓ COMPONENTE-InicioVideo ↓-↓-↓-↓-↓ */
   .componente-video-body{
     &__videoTag{

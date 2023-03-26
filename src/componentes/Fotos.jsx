@@ -23,7 +23,7 @@ function Fotos() {
   const arrLowImg = [
     lowIMG_3852,
     // lowIMG_3857,
-    //  lowIMG_3841,
+    // lowIMG_3841,
     // lowIMG_3982,
     lowIMG_4007,
     lowIMG_4063,

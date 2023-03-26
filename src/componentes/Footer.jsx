@@ -12,7 +12,7 @@ function Footer() {
   <div className='footer-body'>
     <div className='footer-body__container'>
       <div className='footer-body__container__logo-container'>
-        <img className='footer-body__container__logo-container__logo' aria-label='Logo Vallulis' src={footerLogo}/>
+        <img className='footer-body__container__logo-container__logo' aria-label='Logo Vallulis' alt='Logo Vallulis' src={footerLogo}/>
       </div>    
       <div className='footer-body__container__contactar-container'>
         <div className='footer-body__container__contactar-container__title'>

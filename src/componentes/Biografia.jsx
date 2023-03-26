@@ -11,10 +11,10 @@ function Biografia() {
     <meta name="description" content="Descubre un poco más sobre Miguel Ángel" />
   </Helmet>
   <div className='biografia-body'>
-    <img className='biografia-body__banner-img' src={banner} alt='banner'/>    
+    <img className='biografia-body__banner-img' src={banner} alt='banner' aria-label='banner-image'/>    
     <div className='biografia-body__texto-container'>
     <div className='biografia-body__perfil-img-container'>
-      <img className='biografia-body__perfil-img-container__perfil-img' aria-label='Imagen de perfil del artista' src={perfil}/>
+      <img className='biografia-body__perfil-img-container__perfil-img' alt='Imagen de perfil del artista' aria-label='Imagen de perfil del artista' src={perfil}/>
     </div>
     La pasión por cantar, se manifestó bien pronto en su vida. Apenas un niño, ya comenzó a llenar las horas del día con el tarareo de canciones... 
     <br/>

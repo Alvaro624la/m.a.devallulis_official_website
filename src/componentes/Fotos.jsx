@@ -52,6 +52,7 @@ function Fotos() {
     setclaseVisualizadorImgOrig('display-none');
     setclaseBtnCerrarImgOrig('display-none');
   };
+  document.addEventListener('keydown', (e) => {if(e.code === 'Escape') cerrarImgOrig()});
   //////
 
   return (
@@ -69,15 +70,23 @@ function Fotos() {
             key={`div__${i}`} 
             className='fotos-body__contenido__div'>
               <img 
+              tabIndex={i+6}     
               key={`div__img__${i}`} 
               className='fotos-body__contenido__div__img' 
               aria-label={`Imagen nombrada como: ${img}`} 
+              alt={`Imagen: ${img}`} 
               src={img}
               loading='lazy'
               onClick={()=>{
                 setRutaActualClick(img);
                 setclaseVisualizadorImgOrig('fotos-body__contenido__ver-img-orig');
                 setclaseBtnCerrarImgOrig('fotos-body__contenido__ver-img-orig__btn-cerrar');
+              }}
+              onKeyDown={(e)=>{
+                if(e.code === 'Enter'){
+                setRutaActualClick(img);
+                setclaseVisualizadorImgOrig('fotos-body__contenido__ver-img-orig');
+                setclaseBtnCerrarImgOrig('fotos-body__contenido__ver-img-orig__btn-cerrar');}
               }}
             />
           </div>
@@ -91,10 +100,11 @@ function Fotos() {
                 return <div 
                 key={`div__${i}`} 
                 className="fotos-body__contenido__ver-img-orig__div">
-                <img 
+                <img
                   key={`div__img__${i}`} 
                   className='fotos-body__contenido__ver-img-orig__div__img' 
                   aria-label={`Imagen nombrada como: ${img}`} 
+                  alt={`Imagen: ${img}`} 
                   src={img}
                 />
               </div>

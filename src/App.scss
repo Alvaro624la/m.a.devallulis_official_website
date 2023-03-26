@@ -396,7 +396,8 @@ $btnComprarCD992: 380px;
           width: $btnComprarCDMobil;
           transform: translateX(-50%);
           z-index: 997;
-          
+          display: block;
+
           &__compraronlinebtn, &__comprartiendabtn{ 
             padding: 10px;
             display: block;
@@ -423,9 +424,10 @@ $btnComprarCD992: 380px;
         &__desplegable-closed{
           bottom: 0;
           left: 50%;
-          transform: scaleY(0.000000001) translateX(-50%);
-          transition: transform 0.4s; // solo transform para inutilizar btns al instante
+          // transform: scaleY(0.000000001) translateX(-50%);
+          // transition: transform 0.4s; // solo transform para inutilizar btns al instante
           z-index: -1;
+          display: none; //al final decido que desaparezcan al instante para ser más Accesibles y que el tab(tabindex) no pase cuando estén escondidos.
         }
       }
     }
@@ -1237,6 +1239,7 @@ background-repeat: repeat-y;
           // filter: 
           // drop-shadow(0px 0px 15px rgb(60, 161, 40));
           color: rgba(0, 0, 0, 0.4);
+          color: #378137;
           transition: all 0.5s;
         }
       }

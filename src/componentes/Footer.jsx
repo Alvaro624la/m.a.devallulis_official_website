@@ -28,14 +28,14 @@ function Footer() {
           <p className='footer-body__container__seguir-container__title__p' aria-label='Titulo. Seguir en redes sociales:'>Seguir en:</p>
         </div>
         <div className='footer-body__container__seguir-container__icons'>
-          <a href={MADV.facebook} target='_blank' rel="noreferrer noopener" aria-label='Facebook logo-link'><FaFacebook/></a>
-          <a href={MADV.instagram} target='_blank' rel="noreferrer noopener" aria-label='Instagram logo-link'><FaInstagramSquare/></a>
-          <a href={MADV.youtube} target='_blank' rel="noreferrer noopener" aria-label='Youtube logo-link'><FaYoutube/></a>
-          <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link'><FaSpotify/></a>
-          <a href={MADV.appleMusic} target='_blank' rel="noreferrer noopener" aria-label='Apple Music logo-link'><FaApple/></a>
-          <a href={MADV.amazonMusic} target='_blank' rel="noreferrer noopener" aria-label='Amazon Music logo-link'><FaAmazon/></a>
-          <a href={MADV.deezer} target='_blank' rel="noreferrer noopener" aria-label='Deezer logo-link'><FaDeezer/></a>
-          <a href={MADV.tidal} target='_blank' rel="noreferrer noopener" aria-label='Tidal logo-link'><SiTidal/></a>
+          <a href={MADV.facebook} target='_blank' rel="noreferrer noopener" aria-label='Facebook logo-link'><FaFacebook alt="Facebook logo svg image"/></a>
+          <a href={MADV.instagram} target='_blank' rel="noreferrer noopener" aria-label='Instagram logo-link'><FaInstagramSquare alt="Instagram logo svg image"/></a>
+          <a href={MADV.youtube} target='_blank' rel="noreferrer noopener" aria-label='Youtube logo-link'><FaYoutube alt="Youtube logo svg image"/></a>
+          <a href={MADV.spotify} target='_blank' rel="noreferrer noopener" aria-label='Spotify logo-link'><FaSpotify alt="Spotify logo svg image"/></a>
+          <a href={MADV.appleMusic} target='_blank' rel="noreferrer noopener" aria-label='Apple Music logo-link'><FaApple alt="Apple logo svg image"/></a>
+          <a href={MADV.amazonMusic} target='_blank' rel="noreferrer noopener" aria-label='Amazon Music logo-link'><FaAmazon alt="Amazon logo svg image"/></a>
+          <a href={MADV.deezer} target='_blank' rel="noreferrer noopener" aria-label='Deezer logo-link'><FaDeezer alt="Deezer logo svg image"/></a>
+          <a href={MADV.tidal} target='_blank' rel="noreferrer noopener" aria-label='Tidal logo-link'><SiTidal alt="Tidal logo svg image"/></a>
         </div>
       </div>
     </div>

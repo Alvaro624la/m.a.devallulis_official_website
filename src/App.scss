@@ -455,8 +455,9 @@ $btnComprarCD992: 380px;
         top: 0;
         right: 0;
         background-color: transparent;
-        width: 50px;
-        height: 50px;
+        width: 1em;
+        height: 1em;
+        padding: 1em;
         display: grid;
         place-content: center;
         place-items: center;
@@ -465,7 +466,7 @@ $btnComprarCD992: 380px;
 
         &__bar1, &__bar2{
           background-color: #f00;
-          width: 30px;
+          width: 2em;
           $barsHeight: 4px;
           height: $barsHeight; //height agranda a la dcha, por eso necesito translate a la izq
           transform: rotateZ(45deg) translate(calc($barsHeight/1.5), calc($barsHeight/1.5));

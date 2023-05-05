@@ -29,7 +29,7 @@ function MusicaCdComprar() {
     <>
     <div className='componente-musicacdcomprar-body__ultimo-disco-container'>
         <div className={claseModal}>
-            <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__btn-cerrar' onClick={modalOpenClose} aria-label='Boton para cerrar la ventana emergente de compra en tienda' alt='Boton para cerrar la ventana emergente de compra en tienda'>
+            <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__btn-cerrar' onClick={modalOpenClose} aria-label='Boton para cerrar la ventana emergente de compra en tienda'>
                 <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__btn-cerrar__bar1'></div>
                 <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__btn-cerrar__bar2'></div>
             </div>

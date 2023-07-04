@@ -69,18 +69,8 @@ function App() {
 
 export default App;
 
-//falta:
-
-  //debajo de boton COMPRALO YA, que salgan dos opciones, COMPRAR ONLINE o COMPRAR EN TIENDA (se abre apartado con HOTEL RIO CEA, dirección, maps(iframe o yoquese)))
-  
-  //HOTEL RIO CEA
-  // Avda Mister Universo Juan Ferrero, 55 24880,
-  // Puente Almuhey León, España
-  // Teléfonos: 987 703 521
-  //https://www.hotelriocea.com/contacto/
-
-  //avanzado
-//javascript how detect finger to right (para esconder la haburguer nav)
-// funcionaliad ver icono play o pause al clickar individualmente cada título
-// resproducir solo muestra clickada
-//usar hook useMemo para componente fotos
+//Mejoras:
+  //javascript how detect finger to right (para esconder la haburguer nav)
+  // funcionaliad ver icono play o pause al clickar individualmente cada título
+  // resproducir solo muestra clickada
+  //usar hook useMemo para componente fotos

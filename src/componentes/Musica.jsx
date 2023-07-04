@@ -14,7 +14,7 @@ function Musica() {
   </Helmet>
   <div className='musica-body'>
     <div className='musica-body__banner-cont'>
-      <img className='musica-body__banner-cont__img' src={banner} aria-label='Imagen cabecera de música'/>
+      <img className='musica-body__banner-cont__img' src={banner} aria-label='Imagen cabecera de música' alt='Imagen cabecera de música'/>
     </div>
     <MusicaCdComprar/>
     <MusicaMuestrasAudio/>

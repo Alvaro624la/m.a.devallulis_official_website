@@ -42,7 +42,7 @@ function Nav() {
     <nav className='nav-container'>
       {/* NAV */}
       <div className='nav-container__logo'>
-        <NavLink to='/'><img className='nav-container__logo__img' aria-label='Logo-link a Inicio' onClick={()=>setvariableForRandomUseEffect(Math.random)} src={logo1}/></NavLink>
+        <NavLink to='/'><img tabIndex={0} className='nav-container__logo__img' aria-label='Logo-link a Inicio' onClick={()=>setvariableForRandomUseEffect(Math.random)} src={logo1}/></NavLink>
       </div>
       <div className='nav-container__barra' ref={refNav}>
         <NavLink className='nav-container__barra__navlink' aria-label='Link a Música' onClick={()=>setvariableForRandomUseEffect(Math.random)} to='/musica'>Música</NavLink>
@@ -61,7 +61,7 @@ function Nav() {
       </div>
       <div className={burgerContent}>
         <div className='nav-container__hamburguer-content__logo-cont'>
-          <NavLink to='/' onClick={()=>esconderBurguer()}><img className='nav-container__hamburguer-content__logo-cont__img' aria-label='Logo-link a Inicio' src={logo2}/></NavLink>
+          <NavLink to='/' onClick={()=>esconderBurguer()}><img className='nav-container__hamburguer-content__logo-cont__img' alt='Logo-link a Inicio' aria-label='Logo-link a Inicio' src={logo2}/></NavLink>
         </div>
         <div className='nav-container__hamburguer-content__links-cont'>
           <NavLink className='nav-container__hamburguer-content__links-cont__navlink' aria-label='Link a Inicio' to='/' onClick={()=>esconderBurguer()}>Inicio</NavLink>

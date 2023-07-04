@@ -35,7 +35,7 @@ function MusicaCdComprar() {
             </div>
             <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq'>
                 <h3 className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__titulo'>DISPONIBLE EN:</h3>
-                <img className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__logo' src={hotelRioCeaLogo} alt='logo del Hotel Rio Cea, en Puente Almuhey, León'/>
+                <img className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__logo' src={hotelRioCeaLogo} alt='logo del Hotel Rio Cea, en Puente Almuhey, León' aria-label='logo del Hotel Rio Cea, en Puente Almuhey, León'/>
                 <p className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__direccion'>Avda Mister Universo Juan Ferrero, 55 24880, Puente Almuhey León, España</p>
             </div>
             <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__dcha'>
@@ -43,7 +43,7 @@ function MusicaCdComprar() {
             </div>
         </div>
         <div className='componente-musicacdcomprar-body__ultimo-disco-container__img-container'>
-            <img className='componente-musicacdcomprar-body__ultimo-disco-container__img-container__img'  aria-label='Imagen del último disco del artista' src={ultimoDisco}/>
+            <img className='componente-musicacdcomprar-body__ultimo-disco-container__img-container__img' alt='Imagen del último disco del artista' aria-label='Imagen del último disco del artista' src={ultimoDisco}/>
         </div>
         <div className='componente-musicacdcomprar-body__ultimo-disco-container__btn-container'>
             <div className='componente-musicacdcomprar-body__ultimo-disco-container__btn-container__estirar'  aria-label='Botones para comprar último disco' onClick={desplegableOpenClose}>

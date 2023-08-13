@@ -65,8 +65,8 @@ function Fotos() {
   return (
     <>
     <Helmet>
-      <title>Fotos | Miguel Ángel de Vallulis</title>
-      <meta name="description" content="Las mejores fotos de Miguel Ángel. ¡Descúbrelas ahora!" />
+      <title>Fotos | Miguel Ángel de Vallulis: Descubre sus mejores fotos</title>
+      <meta name="description" content="Descubre una colección cautivadora de fotografías que capturan la esencia artística de Miguel Ángel de Vallulis. Sumérgete en su mundo a través de estas imágenes inspiradoras." />
       {/* <!-- Google tag (gtag.js) --> */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
       <script>{googleTag()}</script>

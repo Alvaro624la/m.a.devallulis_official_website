@@ -17,8 +17,8 @@ function Inicio() {
   return (
   <>
   <Helmet>
-    <title>Inicio | Miguel Ángel de Vallulis</title>
-    <meta name="description" content="¡Ya puedes escuchar el nuevo álbum de Miguel Angel de Vallulis en su nueva página web, y mucho más!" />
+    <title>Inicio | Miguel Ángel de Vallulis: La voz de la Montaña Leonesa</title>
+    <meta name="description" content="Sumérgete en el mundo musical de Miguel Ángel de Vallulis. Escucha su nuevo álbum y descubre más en su emocionante página web. ¡La montaña leonesa cobra vida a través de su voz!" />
     {/* <!-- Google tag (gtag.js) --> */}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
     <script>{googleTag()}</script>

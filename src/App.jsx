@@ -11,7 +11,7 @@ import Error404 from './componentes/Error404';
 import Footer from './componentes/Footer';
 import { ScaleLoader } from "react-spinners";
 import ContextoMADV from './componentes/contexto/Contexto';
-import vSpinner from './img/Logo-PNG_V-negra.png'
+import vSpinner from './img/Logo-PNG_V-negra.png';
 
 function App() {
 

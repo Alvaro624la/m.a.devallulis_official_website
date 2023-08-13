@@ -15,8 +15,8 @@ function Biografia() {
   return (
   <>
   <Helmet>
-    <title>Biografía | Miguel Ángel de Vallulis</title>
-    <meta name="description" content="Descubre un poco más sobre Miguel Ángel" />
+    <title>Biografía | Miguel Ángel de Vallulis: Explora sus vivencias</title>
+    <meta name="description" content="Explora la fascinante trayectoria musical de Miguel Ángel de Vallulis: desde sus primeros tarareos en la infancia hasta su evolución como artista multifacético. Conoce su historia única." />
     {/* <!-- Google tag (gtag.js) --> */}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
     <script>{googleTag()}</script>

@@ -17,8 +17,8 @@ function Musica() {
   return (
   <>
   <Helmet>
-    <title>Musica | Miguel Ángel de Vallulis</title>
-    <meta name="description" content="Descubre su nuevo álbum 'Vallulis' y disfruta de la voz de la montaña en todo su esplendor. ¡Ya disponible en todas las plataformas!" />
+    <title>Musica | Miguel Ángel de Vallulis: Escucha su último álbum</title>
+    <meta name="description" content="Descubre la magia de 'Vallulis', el último álbum de Miguel Ángel de Vallulis. Sumérgete en su voz y experimenta la esencia de la montaña en cada nota. ¡Disponible ahora en todas las plataformas!" />
     {/* <!-- Google tag (gtag.js) --> */}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
     <script>{googleTag()}</script>

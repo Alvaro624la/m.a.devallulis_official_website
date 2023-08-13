@@ -50,8 +50,8 @@ function Contacto() {
   return (
   <>
   <Helmet>
-    <title>Contacto | Miguel Ángel de Vallulis</title>
-    <meta name="description" content="Envía un mensaje a Miguel Ángel de Vallulis" />
+    <title>Contacto | Miguel Ángel de Vallulis: Envíale un mensaje</title>
+    <meta name="description" content="Establece contacto con Miguel Ángel de Vallulis. Envía mensajes personalizados y descubre más sobre su música. ¡Comunica tus pensamientos y emociones!" />
     {/* <!-- Google tag (gtag.js) --> */}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
     <script>{googleTag()}</script>

@@ -4,11 +4,22 @@ import banner from '../img/fondo-bio.jpg';
 import perfil from '../img/foto-perfil-bio.jpg';
 
 function Biografia() {
+
+  const googleTag = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+    gtag('config', 'G-KM0V9V0W74');
+  }
+
   return (
   <>
   <Helmet>
     <title>Biografía | Miguel Ángel de Vallulis</title>
     <meta name="description" content="Descubre un poco más sobre Miguel Ángel" />
+    {/* <!-- Google tag (gtag.js) --> */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
+    <script>{googleTag()}</script>
   </Helmet>
   <div className='biografia-body'>
     <img className='biografia-body__banner-img' src={banner} alt='banner' aria-label='banner-image'/>    

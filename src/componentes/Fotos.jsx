@@ -55,11 +55,21 @@ function Fotos() {
   document.addEventListener('keydown', (e) => {if(e.code === 'Escape') cerrarImgOrig()});
   //////
 
+  const googleTag = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+    gtag('config', 'G-KM0V9V0W74');
+  }
+
   return (
     <>
     <Helmet>
       <title>Fotos | Miguel Ángel de Vallulis</title>
-      <meta name="description" content="Aquí verás unas cuantas fotos de Miguel Ángel" />
+      <meta name="description" content="Las mejores fotos de Miguel Ángel. ¡Descúbrelas ahora!" />
+      {/* <!-- Google tag (gtag.js) --> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
+      <script>{googleTag()}</script>
     </Helmet>
     <div className='fotos-body'>
       <div className='fotos-body__contenido'>

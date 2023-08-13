@@ -40,11 +40,21 @@ function Contacto() {
       });
   }
 
+  const googleTag = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+    gtag('config', 'G-KM0V9V0W74');
+  }
+
   return (
   <>
   <Helmet>
     <title>Contacto | Miguel Ángel de Vallulis</title>
     <meta name="description" content="Envía un mensaje a Miguel Ángel de Vallulis" />
+    {/* <!-- Google tag (gtag.js) --> */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0V9V0W74"></script>
+    <script>{googleTag()}</script>
   </Helmet>
   <div className='contacto-body'>
     <div className='contacto-body__frase-container'>

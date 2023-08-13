@@ -449,6 +449,11 @@ $btnComprarCD992: 380px;
       width: 90%;
       border: 1px solid #000;
       border-radius: 20px;
+
+      //título: disponible en
+      & p:first-child{
+        font-size: 1.5em;
+      }
       
       &__btn-cerrar{
         position: absolute;
@@ -784,14 +789,17 @@ audio{
     }
   }
   &__texto-container{
-    color: $oscuro;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1em;
-    letter-spacing: 0.8px;
-    text-align: left;
-    padding: 5em 16%;
-    font-style: italic;
-    font-weight: 400;
+    & p{
+      margin: 0;
+      padding: 5em 16%;
+      color: $oscuro;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1em;
+      letter-spacing: 0.8px;
+      text-align: left;
+      font-style: italic;
+      font-weight: 400;
+    }
   }
 }
 
@@ -914,6 +922,9 @@ background-repeat: repeat-y;
     }
   }
   &__form-container{
+    & > h1 {
+      font-size: 1.5em;
+    }
     &__form{
       display: flex;
       flex-direction: column;
@@ -1396,8 +1407,11 @@ background-repeat: repeat-y;
       }
     }
     &__texto-container{
+      & p {
+        padding: 0em 0em;
+        font-size: 1.1em;
+      }
       padding: 3em 5em;
-      font-size: 1.2em;
     }
   }
   /* --------- FOTOS --------- */
@@ -1688,13 +1702,13 @@ background-repeat: repeat-y;
   .componente-video-body{
     &__videoTag{
       &__titulo{
-        font-size: 3em;
+        font-size: 2em; // antes 3 sin h2
       }
       &__play-btn{
         font-size: 14em;
       }
       &__subtitulo{
-        font-size: 3em;
+        font-size: 2em; // antes 3 sin h2
       }
     }
   }  

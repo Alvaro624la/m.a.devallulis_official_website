@@ -28,25 +28,29 @@ function InicioVideo() {
         // >
         className='componente-video-body'>
         <div className={claseVideoTag}>
-            <a 
+            <h2>
+                <a 
                 className='
                 componente-video-body__videoTag__titulo' 
                 aria-label='Link al videoclip del artista en Youtube'
                 href='https://www.youtube.com/watch?v=ogeLbJeV4_Q' 
                 target='_blank'
                 rel="noreferrer noopener">━━━ Ver videoclip entero
-            </a>
+                </a>
+            </h2>
             <FaRegPlayCircle 
                 className='componente-video-body__videoTag__play-btn'
                 onClick={playVideoYT}/>
             <Link to='/musica' aria-label='Link a la musica del artista'>
-                <div 
+                <h2>
+                    <div 
                     className='
                     componente-video-body__videoTag__subtitulo'
                     href='https://www.youtube.com/watch?v=ogeLbJeV4_Q' 
                     target='_blank'
                     rel="noreferrer noopener">Echa un vistazo a su último álbum ━━━
-                </div>
+                    </div>
+                </h2>
             </Link>
             <video 
                 poster={fallback}

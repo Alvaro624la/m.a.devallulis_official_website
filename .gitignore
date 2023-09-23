@@ -11,6 +11,12 @@
 # production
 /build
 
+# hostinger
+.htaccess
+
+#search console - google - sitemap
+sitemap.xml
+
 # misc
 .DS_Store
 .env.local

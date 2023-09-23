@@ -40,7 +40,7 @@ function MusicaMuestrasAudio() {
                         title='Youtube Videoclip - Viento Del Norte'
                         className='componente-musicamuestrasaudio-body__ver__video__iframe'
                         aria-label='Videoclip del artista en Youtube' 
-                        src={`https://www.youtube-nocookie.com/embed/A4oLeO90LeY`}
+                        src={`https://www.youtube-nocookie.com/embed/vY2lG7GR_xo`}
                         allowFullScreen
                         importance='low'
                         allow='autoplay'/>

@@ -27,6 +27,7 @@ function MusicaMuestrasAudio() {
     const audiosArr = [audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10, audio11, audio12, audio13, audio14];
     // palabras acomnpañadas de - o ' ' | palabra unica
     const regExp = /([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*((\s\w*)|(\s\w*))*)|([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*)/g;
+    // const regExp = /\/(\d+\. )?(.*?)\.mp3/g;
 
     const audioaudiosArr = [];
 

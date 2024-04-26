@@ -25,6 +25,7 @@ function MusicaMuestrasAudio() {
     const { MADV } = useContext(ContextoMADV);
 
     const audiosArr = [audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9, audio10, audio11, audio12, audio13, audio14];
+    const nombreMuestra = ['Sombras Del Mes De Abril', 'El Gato De Taranilla', 'Corazones Que Calientan', 'Te Escondí En Mi Corazón', 'Padre De Viento Y De Nieve', 'Por Las Orillas Del Amor', 'Pajarines En La Velilla', 'Viento Del Norte', 'Perro Fiel', 'Volverás En Primavera', 'Soñaban Tocar Estrellas', 'Villalmonte Es Mi Pueblo', 'Me Duermo En Tu Recuerdo', 'Mi Virgen De La Velilla'];
     // palabras acomnpañadas de - o ' ' | palabra unica
     const regExp = /([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*((\s\w*)|(\s\w*))*)|([A-ZÁÉÍÓÚáéíóúÑñ][\wÁÉÍÓÚáéíóúÑñ]*)/g;
     // const regExp = /\/(\d+\. )?(.*?)\.mp3/g;
@@ -56,7 +57,8 @@ function MusicaMuestrasAudio() {
                         <div className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio'>
                             <div className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__play-pause'>
                                     <div className='componente-musicamuestrasaudio-body__escuchar__song-container__reproductor-audio__play-pause__song-name'>
-                                        {muestra.match(regExp).join('').replace(/[-?_?]/g, ' ')}
+                                        {/* {muestra.match(regExp).join('').replace(/[-?_?]/g, ' ')} */}
+                                        {nombreMuestra[index]}
                                     </div>
                                     <audio
                                     // loop

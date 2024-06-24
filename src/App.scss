@@ -498,8 +498,15 @@ $btnComprarCD992: 380px;
         &__logo{
           width: 150px;
         }
+        &__direccion-titulo{
+          padding: 0;
+          font-size: 1.2em;
+        }
         &__direccion{
-          padding: 1em;
+          // Hotel Rio Cea 
+          // padding: 1em;
+          // Libreria
+          padding: 0;
         }
       }
       &__dcha{

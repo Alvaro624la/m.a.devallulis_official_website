@@ -39,6 +39,7 @@ function MusicaCdComprar() {
                 {/* <img className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__logo' src={hotelRioCeaLogo} alt='logo del Hotel Rio Cea, en Puente Almuhey, León' aria-label='logo del Hotel Rio Cea, en Puente Almuhey, León'/> */}
                 {/* <p className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__direccion'>Avda Mister Universo Juan Ferrero, 55 24880, Puente Almuhey León, España</p> */}
                 {/* Librería */}
+                <p className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__direccion-titulo'>Librería de Puente Almuhey</p>
                 <p className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__izq__direccion'>Carr. Almanza, 62, 24880 Puente Almuhey, León</p>
             </div>
             <div className='componente-musicacdcomprar-body__ultimo-disco-container__modal-opened__dcha'>

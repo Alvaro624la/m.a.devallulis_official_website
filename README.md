@@ -15,7 +15,7 @@ Página de artista musical profesional donde se puede encontrar toda la informac
 * Tienda asociada: Prestashop + Hostinger + .es de Hostinger: [visitar aquí](https://shopvallulis.es/)
 
 ## Demo
-Si quieres ver la demo de éste proyecto, puedes visitar la [Demo del proyecto](https://miguelangeldevallulis.com/)
+Si quieres ver la demo de éste proyecto, puedes visitar la [Demo del proyecto](#)
 
 ## Vista previa
 ![](/preview.jpg)
